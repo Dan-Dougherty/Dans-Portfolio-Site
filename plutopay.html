@@ -1,136 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlutoPay Case Study - Dan Dougherty - UX Designer</title>
     <!-- Meta Description -->
-        <meta name="description" content="Explore Dan Dougherty's UX Design Portfolio featuring innovative design projects, in-depth case studies, and a showcase of skills in UX/UI design.">
-    <!-- Meta Keywords (optional and often not used by Google for ranking but can be useful for other search engines) -->
-        <meta name="keywords" content="Dan Dougherty, UX Designer, User Experience, UI Design, Portfolio, Case Studies">
+    <meta name="description" content="Explore Dan Dougherty's UX Design Portfolio featuring the PlutoPay Case Study. Discover innovative design solutions and user-centered approaches in financial transactions.">
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="Dan Dougherty, UX Designer, PlutoPay, User Experience, UI Design, Case Study, Financial Transactions">
     <!-- Open Graph Tags for social media -->
-        <meta property="og:title" content="Dan Dougherty's UX Design Portfolio">
-        <meta property="og:description" content="Explore innovative UX design projects and professional insights from Dan Dougherty.">
-        <meta property="og:image" content="img/image-goes-here">
-        <meta property="og:url" content="http://www.mydomain.com">
-        <meta property="og:type" content="website">
+    <meta property="og:title" content="PlutoPay Case Study - Dan Dougherty - UX Designer">
+    <meta property="og:description" content="Explore Dan Dougherty's UX Design Portfolio featuring the PlutoPay Case Study. Discover innovative design solutions and user-centered approaches in financial transactions.">
+    <meta property="og:image" content="img/Case Study - PlutoPay.png">
+    <meta property="og:url" content="http://www.mydomain.com/plutopay.html">
+    <meta property="og:type" content="website">
     <!-- Twitter Card data -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Dan Dougherty's UX Design Portfolio">
-        <meta name="twitter:description" content="Explore innovative UX design projects and professional insights from Dan Dougherty.">
-        <meta name="twitter:image" content="img/image-goes-here">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PlutoPay Case Study - Dan Dougherty - UX Designer">
+    <meta name="twitter:description" content="Explore Dan Dougherty's UX Design Portfolio featuring the PlutoPay Case Study. Discover innovative design solutions and user-centered approaches in financial transactions.">
+    <meta name="twitter:image" content="img/Case Study - PlutoPay.png">
     <!-- Additional tags such as author, etc. -->
-        <meta name="author" content="Dan Dougherty">
+    <meta name="author" content="Dan Dougherty">
 
-    <!--Links-->
-        <link rel="stylesheet" type="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" type="text/CSS" href="css/style.css">
+    <!-- Links -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/plutopay.css">
 
-    <!--Font Families-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Font Families -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!--Viewport-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Logo SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="162" height="49" viewBox="0 0 162 49">
+                        <text transform="translate(0 19)" fill="#FFFFFF" font-size="20" font-family="Montserrat-Bold, Montserrat" font-weight="700">
+                            <tspan x="0" y="0">Dan Dougherty</tspan>
+                            <tspan font-size="18" font-family="Montserrat-Regular, Montserrat" font-weight="400">
+                                <tspan x="0" y="25">UX Designer</tspan>
+                            </tspan>
+                        </text>
+                    </svg>
+                </a>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigation -->
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="files/Intro to UX Design 1.8 Future Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!--Start Body-->
-    <body>
-        <header>
-            <div class="header-container">
-                <div class="logo">
-                    <a href="index.html">
-                        <!-- Logo SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="162" height="49" viewBox="0 0 162 49">
-                            <text transform="translate(0 19)" fill="#FFFFFF" font-size="20" font-family="Montserrat-Bold, Montserrat" font-weight="700">
-                                <tspan x="0" y="0">Dan Dougherty</tspan>
-                                <tspan font-size="18" font-family="Montserrat-Regular, Montserrat" font-weight="400">
-                                    <tspan x="0" y="25">UX Designer</tspan>
-                                </tspan>
-                            </text>
-                        </svg>
-                    </a>
-                </div>
-    
-                <div class="hamburger-menu" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-    
-                <!-- Navigation -->
-                <nav>
-                    <ul id="nav-list">
-                        <li><a href="files/Intro to UX Design 1.8 Future Resume.pdf" target="_blank">Resume</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('open');
+        }
+    </script>
+
+    <!-- Main Section Starts -->
+    <main>
+        <div class="case-study">
+            <div class="case-study-container">
+                <picture>
+                    <!-- High-resolution screens -->
+                    <source srcset="img/Case Study - PlutoPay.png" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
+                    <!-- Medium-resolution screens, larger viewports -->
+                    <source srcset="img/Case Study - PlutoPay.png" media="(min-width: 768px)">
+                    <!-- Small screens, mobile devices -->
+                    <source srcset="img/Case Study - PlutoPay.png" media="(max-width: 767px)">
+                    <!-- Fallback image -->
+                    <img src="img/Case Study - PlutoPay.png" alt="PlutoPay Case Study">
+                </picture>
+            </div>
+        </div>
+    </main>
+    <!-- End Main Section -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-inner-wrapper">
+                <!-- Contact Header and Description -->
+                <section class="footer-contact">
+                    <h2>Get in Touch</h2>
+                    <p>If you're interested in working together or just want to say hello, don't hesitate to reach out!</p>
+                    <button onclick="location.href='mailto:dandougherty1011@gmail.com'" target="_blank" rel="noopener noreferrer">Contact Me</button>
+                </section>
+                <section class="footer-social">
+                    <h2>Follow Me</h2>
+                    <ul>
+                        <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                     </ul>
-                </nav>
-            </div>
-        </header>
-    
-        <script>
-            function toggleMenu() {
-                const navList = document.getElementById('nav-list');
-                navList.classList.toggle('open');
-            }
-        </script>
-        
-
-        <!--Main Section Starts-->
-        <main>
-            <div id="work">
-                        <picture>
-                            <!-- High-resolution screens -->
-                            <source srcset="img/Case Study - PlutoPay@2x.png" 
-                                    media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), 
-                                           (min-width: 1200px) and (min-resolution: 192dpi)">
-                            <!-- Medium-resolution screens, larger viewports -->
-                            <source srcset="img/Case Study - PlutoPay@2x.png" 
-                                    media="(min-width: 768px)">
-                            <!-- Small screens, mobile devices -->
-                            <source srcset="img/Case Study - PlutoPay.png" 
-                                    media="(max-width: 767px)">
-                            <!-- Fallback image -->
-                            <img src="img/Case Study - PlutoPay.png" 
-                                 alt="PlutoPay Case Study">
-                        </picture>
-            </div>
-        </main>
-        <!--End Main Section-->
-
-
-        <!--Start Footer-->
-        <footer>
-            <div class="footer-wrapper">
-                <div class="footer-inner-wrapper">
-                    <!-- Contact Header and Description -->
-                    <section class="footer-contact">
-                        <h2>Get in Touch</h2>
-                        <p>If you're interested in working together or just want to say hello, don't hesitate to reach out!</p>
-                        <button onclick="location.href='mailto:dandougherty1011@gmail.com'" target="_blank" rel="noopener noreferrer">Contact Me</button>
-                    </section>
-                    <section class="footer-social">
-                        <h2>Follow Me</h2>
-                        <ul>
-                            <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                            <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                            <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <section class="footer-legal">
-                    <p>&copy; 2024 Dan Dougherty. All rights reserved.</p>
                 </section>
             </div>
-        </footer>
-        
-        <!--End Footer-->
-
-    </body>
-    <!--End Body-->
-
+            <section class="footer-legal">
+                <p>&copy; 2024 Dan Dougherty. All rights reserved.</p>
+            </section>
+        </div>
+    </footer>
+    <!-- End Footer -->
+</body>
 </html>
