@@ -1,37 +1,45 @@
-/* 
-Collors Used: 
-    Primary Color: Off-White (#FFFFF0)
-    Secondary Color: Teal Blue (#008080)
-    Accent Color: Peach (#FFE5B4)
+:root {
+    --primary-color: #008080;
+    --secondary-color: #004D4D;
+    --hover-color: #002F2F;
+    --light-bg-color: #F7F7F7;
+    --highlight-color: #FFE5B4;
+    --highlight-hover-color: #FFD494;
+    --text-color: #333333;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+    --border-radius: 20px;
+    --max-width: 1400px;
+}
 
-    On Off-White (#FFFFF0) Background:
-        dark teal (#004D4D)/dark gray (#333333)
-    On Teal Blue (#008080) Background:
-        white (#FFFFFF)
-    On Peach (#FFE5B4) Background:
-        dark brown (#654321)/deep orange (#CC5500)
-*/
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 img {
     width: 100%;
-  }
+}
 
 body {
     background-color: #FFFFF0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
     font-weight: 300;
-    line-height: 1.6;
-    color: #333333;
+    line-height: var(--line-height);
+    color: var(--text-color);
 }
 
-/* Styling for headers */
+/* Styling for text headers */
 h1, h2, h3, h4 {
     line-height: 1.4;
 }
 
 h1 {
-    font-size: 2.75em; 
+    font-size: 2.75em;
     font-weight: 700;
 }
 
@@ -52,111 +60,559 @@ h4 {
 
 /* Main button styling */
 button {
-    font-weight: 600; 
-    font-size: 1em; 
+    font-weight: 600;
+    font-size: 1em;
     color: #FFFFFF;
-    background-color: #008080;
+    background-color: var(--primary-color);
     padding: 10px 60px;
     border: none;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 /* Hover effect for button */
 button:hover {
-    background-color: #004D4D; /* Darker shade of teal on hover */
+    background-color: var(--secondary-color);
+}
+
+/* Style for the header */
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Container for centering content and setting max-width */
+.header-container {
+    width: 100%;
+    max-width: var(--max-width); /* Maximum width for larger viewports */
+    margin: 0 auto; /* Center the container */
+    padding: 0 40px; /* Default padding for larger viewports */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive padding for the container */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 0 20px; /* Tablet padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px; /* Mobile padding */
+    }
+}
+
+/* Style for the logo */
+.logo {
+    margin-left: 0; /* Align with screen edge */
+}
+
+.logo svg text {
+    fill: #FFFFFF; /* White text color */
+}
+
+/* Style for the navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* White text color */
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 0; /* Align with screen edge */
+    position: absolute; /* Position absolute to place it at the right edge */
+    right: 20px; /* Adjust to align with the screen edge */
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: space-between;
+        padding: 0 20px; /* Ensure no extra padding */
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Style for the Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 160px); /* Ensure the hero section takes up full viewport height minus double header */
+    padding: 0; /* Remove extra padding */
+    margin-bottom: 80px; /* Add bottom margin to prevent other sections from creeping */
+    box-sizing: border-box;
+}
+
+/* Center the content vertically within the hero section */
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Max width for the hero content */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0; /* Remove extra padding */
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    justify-content: space-between; /* Ensure space between items */
+}
+
+/* Adjust image width and margin */
+.personal-img {
+    flex: 0 1 30%; /* Constrain the image width to 40% of the hero content */
+    margin-right: 20px;
+    margin-left: 80px;
+    max-height: 600px; /* Set a max height for the image */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    border-radius: var(--border-radius); /* Border radius for the container */
+}
+
+.personal-img img {
+    width: 100%; /* Make image cover the entire width of the container */
+    height: 100%; /* Make image cover the entire height of the container */
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    border-radius: var(--border-radius); /* Border radius for the image */
+}
+
+.hero-text {
+    flex: 1; /* Allow the text container to take the remaining space */
+    max-width: 60%; /* Constrain the width of the text to 60% of the hero content */
+    padding-left: 40px;
+    text-align: left; /* Left-align text */
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+}
+
+.hero-text p {
+    margin-bottom: 50px;
+    max-width: 80%;
+}
+
+button {
+    font-weight: 600;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    padding: 10px 60px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Allow height to adjust for content */
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+        margin-top: 75px;
+        margin-bottom: 100px; /* Adjust bottom margin for smaller screens */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        align-items: center; /* Center the items horizontally */
+    }
+
+    .personal-img {
+        margin: 0 auto 20px; /* Center image and add bottom margin */
+        width: 100%; /* Make image full width on smaller screens */
+        max-width: 400px; /* Set a maximum width for the image */
+        max-height: none; /* Remove max-height constraint for smaller screens */
+    }
+
+    .personal-img img {
+        height: auto; /* Ensure the image scales correctly on smaller screens */
+        width: 100%; /* Make image full width */
+        display: block; /* Ensure the image is displayed as a block */
+    }
+
+    .hero-text {
+        max-width: 100%; /* Ensure text container takes full width on smaller screens */
+        padding: 0 10px; /* Add padding to center the text */
+        text-align: center; /* Center-align text container */
+        margin: 0 auto; /* Ensure the container itself is centered */
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+        margin-bottom: 15px; /* Adjust margin for smaller screens */
+    }
+
+    .hero-text p {
+        text-align: center; /* Center-align the paragraph text */
+        margin: 20px auto 40px auto; /* Center the paragraph and adjust margin */
+        max-width: 100%; /* Ensure the paragraph takes full width */
+    }
+
+    button {
+        padding: 15px 40px; /* Adjust button padding for smaller screens */
+        border-radius: 60px;
+    }
 }
 
 
-/*Cards*/
+/* Cards Section */
+.cards-section {
+    padding: 40px 20px;
+    background-color: #FFFFF0; /* Background color to match the theme */
+    margin-bottom: 100px; /* Add space between cards section and footer */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Gap between cards */
+}
+
+.card-work {
+    background-color: var(--light-bg-color);
+    padding: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 960px;
+    margin: 30px auto;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column; /* Default to column layout for responsiveness */
+}
+
+.card-work h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card-work ul.skills {
+    list-style-type: none;
+    padding: 0;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card-work ul.skills li {
+    padding: 5px 0;
+}
+
+.card-work p {
+    color: var(--text-color);
+    margin-bottom: auto; /* Push the paragraph up */
+}
+
+/* Content container within the card */
+.card-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically by default */
+    align-items: stretch;
+    width: 100%;
+    height: 100%; /* Ensure the content covers the full height */
+}
+
+/* Image container */
+.card-image {
+    width: 100%; /* Full width for responsive layout */
+    flex: 1;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text container */
+.card-text {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Skills list styling */
+.card-text ul.skills {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Add margin for spacing */
+    font-size: 0.8em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-text ul.skills li {
+    padding: 0 5px;
+    color: var(--primary-color);
+}
+
+/* Button styling */
+.card-work button {
+    background-color: var(--highlight-color);
+    color: #444444;
+    border: none;
+    padding: 10px 40px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Push the button to the bottom */
+    align-self: flex-start; /* Align button to start */
+}
+
+/* Button hover effect */
+.card-work button:hover {
+    background-color: var(--highlight-hover-color);
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
     .card-work {
-        background-color: #F7F7F7;
-        padding: 0px;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        flex-direction: row; /* Side-by-side layout for larger screens */
+    }
+
+    .card-content {
+        flex-direction: row; /* Side-by-side content for larger screens */
+    }
+
+    .card-image {
+        flex: 1;
+    }
+
+    .card-text {
+        flex: 1;
+        padding: 20px 30px; /* Adjust padding for larger screens */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color); /* Teal background */
+    color: #FFFFFF;
+    padding: 20px 0; /* Adjust padding */
+    text-align: center; /* Center text by default */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
+}
+
+footer section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin-bottom: 20px; /* Reduced margin */
+    font-size: 1em;
+}
+
+.footer-contact button {
+    font-weight: 600;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: var(--secondary-color); /* Slightly darker teal for button */
+    padding: 10px 40px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-contact button:hover {
+    background-color: var(--hover-color); /* Even darker teal on hover */
+}
+
+.footer-social {
+    text-align: center; /* Center the social section */
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social ul li {
+    margin: 0 10px;
+}
+
+.footer-social ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: var(--font-family);
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.footer-social ul li a:hover {
+    color: var(--highlight-color); /* Light orange on hover */
+}
+
+.footer-legal p {
+    font-size: 0.875em;
+    margin-top: 10px; /* Reduced margin */
+    text-align: center;
+}
+
+/* Wrapper for centering the footer content */
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px; /* Set maximum width */
+    margin: 0 auto; /* Center the wrapper */
+    box-sizing: border-box;
+}
+
+/* Inner wrapper for centering content */
+.footer-inner-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.footer-inner-wrapper > section {
+    flex: 1;
+    min-width: 200px; /* Minimum width for responsiveness */
+    margin: 20px; /* Margin for spacing */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 20px; /* Increased padding for mobile view */
+    }
+
+    .footer-contact {
+        margin-bottom: 30px; /* Increased margin for better spacing */
+    }
+
+    .footer-social {
+        margin-bottom: 30px; /* Increased margin for better spacing */
+    }
+
+    .footer-legal {
+        margin-top: 20px; /* Increased margin for better spacing */
+    }
+
+    .footer-social ul {
+        flex-direction: column; /* Stack social links vertically */
+    }
+
+    .footer-social ul li {
+        margin: 5px 0; /* Adjust margin for vertical alignment */
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+    }
+    .footer-inner-wrapper {
+        flex-direction: row;
+    }
+
+    footer {
+        padding: 30px 40px; /* Adjusted padding for larger viewports */
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        padding: 30px 40px; /* Adjusted padding for larger viewports */
+    }
+
+    .footer-contact, .footer-social, .footer-legal {
+        width: 30%; /* Ensure each section takes up equal width */
+        margin-right: 3.33%;
+    }
+
+    .footer-legal {
         width: 100%;
-        max-width: 960px;
-        margin: 20px auto;
-        display: flex;
-        overflow: hidden;
+        margin-right: 0;
+        text-align: center;
     }
 
-    .card-work h2 {
-        color: #008E8E; 
-        margin-bottom: 10px; 
+    .footer-social ul {
+        justify-content: center; /* Center the social links */
     }
-
-    .card-work ul.skills {
-        list-style-type: none;
-        padding: 0;
-        color: #008E8E;
-    }
-
-    .card-work ul.skills li {
-        padding: 5px 0;
-    }
-
-    .card-work p {
-        color: #333333;
-    }
-
-    /* Content container within the card */
-        .card-content {
-            display: flex;
-            align-items: stretch;
-            width: 100%;
-        }
-
-    /* Image container */
-        .card-image {
-            flex: 1;
-            max-width: 50%;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-    /* Text container */
-        .card-text {
-            flex: 1; 
-            padding: 20px;
-        }
-
-    /*Skills list styling*/
-        .card-text ul.skills {
-            list-style: none;
-            padding: 0; 
-            margin: 0;
-            font-size: 0.8em;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .card-text ul.skills li {
-            padding: 0px 5px;
-            color: #008E8E;
-        }
-
-    /* Button styling */
-        .card-work button {
-            background-color: #FFE5B4;
-            color: #444444;
-            border: none;
-            padding: 10px 60px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-    /* Button hover effect */
-        .card-work button:hover {
-            background-color: #FFD494;
-        }
+}
