@@ -22,50 +22,60 @@
     <!--Start Body-->
     <body>
         <header>
-            <div class="logo">
-                <a href="index.html">
-                <!--Logo SVG-->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="162" height="49" viewBox="0 0 162 49">
-                    <text transform="translate(0 19)" fill="#008080" font-size="20" 
-                    font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">
-                    Dan Dougherty</tspan><tspan font-size="18" font-family="Montserrat-Regular, Montserrat" 
-                    font-weight="400"><tspan x="0" y="25">UX Designer</tspan></tspan></text></svg>
-                </a>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <!-- Logo SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="162" height="49" viewBox="0 0 162 49">
+                            <text transform="translate(0 19)" fill="#FFFFFF" font-size="20" font-family="Montserrat-Bold, Montserrat" font-weight="700">
+                                <tspan x="0" y="0">Dan Dougherty</tspan>
+                                <tspan font-size="18" font-family="Montserrat-Regular, Montserrat" font-weight="400">
+                                    <tspan x="0" y="25">UX Designer</tspan>
+                                </tspan>
+                            </text>
+                        </svg>
+                    </a>
+                </div>
+    
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+                <!-- Navigation -->
+                <nav>
+                    <ul id="nav-list">
+                        <li><a href="files/Intro to UX Design 1.8 Future Resume.pdf" target="_blank">Resume</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            
-
-            <!--Navigation-->
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="/index.html#work">Work</a></li>
-                    <li><a href="files/Intro to UX Design 1.8 Future Resume.pdf" target="_blank"></target> Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
         </header>
+    
+        <script>
+            function toggleMenu() {
+                const navList = document.getElementById('nav-list');
+                navList.classList.toggle('open');
+            }
+        </script>
         
 
         <!--Main Section Starts-->
         <main>
-            <section class="intro">
-                <picture>
-                    <!-- High-resolution screens (2x) -->
-                    <source srcset="img/Rectangle 8@2x.png" 
-                            media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), 
-                                   (min-width: 1200px) and (min-resolution: 192dpi)">
-                    <!-- Medium-resolution screens, larger viewports -->
-                    <source srcset="img/Rectangle 8.png" 
-                            media="(min-width: 768px)">
-                    <!-- Small screens, mobile devices -->
-                    <source srcset="img/Rectangle 8.png" 
-                            media="(max-width: 767px)">
-                    <!-- Fallback image -->
-                    <img src="img/Rectangle 8.png" 
-                         alt="Dan Dougherty">
-                </picture>
-                
-                    <div>
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="personal-img">
+                        <picture>
+                            <source srcset="img/Profile Img.jpg" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
+                            <source srcset="img/Profile Img.jpg" media="(min-width: 768px)">
+                            <source srcset="img/Profile Img.jpg" media="(max-width: 767px)">
+                            <img src="img/Profile Img.jpg" alt="Dan Dougherty">
+                        </picture>
+                    </div>
+                    <div class="hero-text">
                         <h1>Welcome to My World!</h1>
                         <p>I'm Dan Dougherty. As a UX Designer with a rich background in customer service, I've translated my passion for serving others
                             into creating user-friendly digital solutions. My training at CareerFoundry has equipped me with a skill set that includes user research, 
@@ -73,8 +83,9 @@
                             <br><br>
                             I'm on the lookout for a junior UX designer role where I can apply my knack for problem-solving and user-centered design. 
                             When I'm not immersed in UX, you'll find me under the hood of a car, fine-tuning my ability to innovate and tackle complex problems, 
-                            much like in my design work.</p>                    
+                            much like in my design work.</p>
                     </div>
+                </div>
             </section>
     
             <section class="attributes">
@@ -161,25 +172,29 @@
 
 
         <!--Start Footer-->
-            <footer>
-                <!-- Contact Header and Description -->
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-inner-wrapper">
+                    <!-- Contact Header and Description -->
                     <section class="footer-contact">
                         <h2>Get in Touch</h2>
                         <p>If you're interested in working together or just want to say hello, don't hesitate to reach out!</p>
-                        <button onclick="location.href='mailto:your.email@example.com'">Contact Me</button>
+                        <button onclick="location.href='mailto:dandougherty1011@gmail.com'" target="_blank" rel="noopener noreferrer">Contact Me</button>
                     </section>
                     <section class="footer-social">
-                        <h3>Follow Me</h3>
+                        <h2>Follow Me</h2>
                         <ul>
                             <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
                             <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                             <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                         </ul>
                     </section>
-                    <section class="footer-legal">
-                        <p>&copy; 2024 Dan Dougherty. All rights reserved.</p>
-                    </section>
-            </footer>
+                </div>
+                <section class="footer-legal">
+                    <p>&copy; 2024 Dan Dougherty. All rights reserved.</p>
+                </section>
+            </div>
+        </footer>
         
         <!--End Footer-->
 
