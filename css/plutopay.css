@@ -1,0 +1,412 @@
+:root {
+    --primary-color: #008080;
+    --secondary-color: #004D4D;
+    --hover-color: #002F2F;
+    --light-bg-color: #F7F7F7;
+    --highlight-color: #FFE5B4;
+    --highlight-hover-color: #FFD494;
+    --text-color: #333333;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+    --border-radius: 20px;
+    --max-width: 1400px;
+}
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #FFFFF0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: 300;
+    line-height: var(--line-height);
+    color: var(--text-color);
+}
+
+/* Styling for text headers */
+h1, h2, h3, h4 {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.75em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.25em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.75em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.35em;
+    font-weight: 400;
+}
+
+/* Main button styling */
+button {
+    font-weight: 600;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    padding: 10px 60px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for button */
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Style for the header */
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Container for centering content and setting max-width */
+.header-container {
+    width: 100%;
+    max-width: var(--max-width); /* Maximum width for larger viewports */
+    margin: 0 auto; /* Center the container */
+    padding: 0 40px; /* Default padding for larger viewports */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive padding for the container */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 0 20px; /* Tablet padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px; /* Mobile padding */
+    }
+}
+
+/* Style for the logo */
+.logo {
+    margin-left: 0; /* Align with screen edge */
+}
+
+.logo svg text {
+    fill: #FFFFFF; /* White text color */
+}
+
+/* Style for the navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* White text color */
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 0; /* Align with screen edge */
+    position: absolute; /* Position absolute to place it at the right edge */
+    right: 20px; /* Adjust to align with the screen edge */
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: space-between;
+        padding: 0 20px; /* Ensure no extra padding */
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Main Section Styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFFF0;
+}
+
+.case-study {
+    width: 100%;
+    max-width: 950px; /* Adjust based on your desired max width */
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.case-study-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.case-study picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.case-study img {
+    width: 100%;
+    height: auto;
+    max-width: 919px; /* Ensure the image does not exceed its original width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .case-study {
+        max-width: 919px; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study {
+        max-width: 100%; /* Full width for mobile devices */
+        margin: 0 auto;
+        padding: 20px 0px 20px 0px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color); /* Teal background */
+    color: #FFFFFF;
+    padding: 20px 0; /* Adjust padding */
+    text-align: center; /* Center text by default */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
+}
+
+footer section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin-bottom: 20px; /* Reduced margin */
+    font-size: 1em;
+}
+
+.footer-contact button {
+    font-weight: 600;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: var(--secondary-color); /* Slightly darker teal for button */
+    padding: 10px 40px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-contact button:hover {
+    background-color: var(--hover-color); /* Even darker teal on hover */
+}
+
+.footer-social {
+    text-align: center; /* Center the social section */
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social ul li {
+    margin: 0 10px;
+}
+
+.footer-social ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: var(--font-family);
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.footer-social ul li a:hover {
+    color: var(--highlight-color); /* Light orange on hover */
+}
+
+.footer-legal p {
+    font-size: 0.875em;
+    margin-top: 10px; /* Reduced margin */
+    text-align: center;
+}
+
+/* Wrapper for centering the footer content */
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px; /* Set maximum width */
+    margin: 0 auto; /* Center the wrapper */
+    box-sizing: border-box;
+}
+
+/* Inner wrapper for centering content */
+.footer-inner-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.footer-inner-wrapper > section {
+    flex: 1;
+    min-width: 200px; /* Minimum width for responsiveness */
+    margin: 20px; /* Margin for spacing */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 20px; /* Increased padding for mobile view */
+    }
+
+    .footer-contact {
+        margin-bottom: 30px; /* Increased margin for better spacing */
+    }
+
+    .footer-social {
+        margin-bottom: 30px; /* Increased margin for better spacing */
+    }
+
+    .footer-legal {
+        margin-top: 20px; /* Increased margin for better spacing */
+    }
+
+    .footer-social ul {
+        flex-direction: column; /* Stack social links vertically */
+    }
+
+    .footer-social ul li {
+        margin: 5px 0; /* Adjust margin for vertical alignment */
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+    }
+    .footer-inner-wrapper {
+        flex-direction: row;
+    }
+
+    footer {
+        padding: 30px 40px; /* Adjusted padding for larger viewports */
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        padding: 30px 40px; /* Adjusted padding for larger viewports */
+    }
+
+    .footer-contact, .footer-social, .footer-legal {
+        width: 30%; /* Ensure each section takes up equal width */
+        margin-right: 3.33%;
+    }
+
+    .footer-legal {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .footer-social ul {
+        justify-content: center; /* Center the social links */
+    }
+}
