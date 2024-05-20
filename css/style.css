@@ -88,9 +88,9 @@ header {
 /* Container for centering content and setting max-width */
 .header-container {
     width: 100%;
-    max-width: var(--max-width); /* Maximum width for larger viewports */
-    margin: 0 auto; /* Center the container */
-    padding: 0 40px; /* Default padding for larger viewports */
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,23 +99,23 @@ header {
 /* Responsive padding for the container */
 @media (max-width: 1024px) {
     .header-container {
-        padding: 0 20px; /* Tablet padding */
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 768px) {
     .header-container {
-        padding: 0 20px; /* Mobile padding */
+        padding: 0 20px;
     }
 }
 
 /* Style for the logo */
 .logo {
-    margin-left: 0; /* Align with screen edge */
+    margin-left: 0;
 }
 
 .logo svg text {
-    fill: #FFFFFF; /* White text color */
+    fill: #FFFFFF;
 }
 
 /* Style for the navigation */
@@ -136,7 +136,7 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: #FFFFFF; /* White text color */
+    color: #FFFFFF;
     font-family: var(--font-family);
     font-size: 18px;
     font-weight: 700;
@@ -152,9 +152,9 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 0; /* Align with screen edge */
-    position: absolute; /* Position absolute to place it at the right edge */
-    right: 20px; /* Adjust to align with the screen edge */
+    margin-right: 0; 
+    position: absolute; 
+    right: 20px; 
 }
 
 .hamburger-menu span {
@@ -168,7 +168,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .header-container {
         justify-content: space-between;
-        padding: 0 20px; /* Ensure no extra padding */
+        padding: 0 20px; 
     }
 
     .hamburger-menu {
@@ -201,9 +201,9 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 160px); /* Ensure the hero section takes up full viewport height minus double header */
-    padding: 0; /* Remove extra padding */
-    margin-bottom: 80px; /* Add bottom margin to prevent other sections from creeping */
+    height: calc(100vh - 160px); 
+    padding: 0;
+    margin-bottom: 80px;
     box-sizing: border-box;
 }
 
@@ -211,36 +211,36 @@ nav ul li a:hover {
 .hero-content {
     display: flex;
     align-items: center;
-    max-width: 1200px; /* Max width for the hero content */
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0; /* Remove extra padding */
-    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
-    justify-content: space-between; /* Ensure space between items */
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 /* Adjust image width and margin */
 .personal-img {
-    flex: 0 1 30%; /* Constrain the image width to 40% of the hero content */
+    flex: 0 1 30%;
     margin-right: 20px;
     margin-left: 80px;
-    max-height: 600px; /* Set a max height for the image */
-    overflow: hidden; /* Ensure image doesn't overflow */
-    border-radius: var(--border-radius); /* Border radius for the container */
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
 }
 
 .personal-img img {
-    width: 100%; /* Make image cover the entire width of the container */
-    height: 100%; /* Make image cover the entire height of the container */
-    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
-    border-radius: var(--border-radius); /* Border radius for the image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius); 
 }
 
 .hero-text {
-    flex: 1; /* Allow the text container to take the remaining space */
-    max-width: 60%; /* Constrain the width of the text to 60% of the hero content */
+    flex: 1; 
+    max-width: 60%; 
     padding-left: 40px;
-    text-align: left; /* Left-align text */
+    text-align: left;
 }
 
 .hero-text h1 {
@@ -271,52 +271,52 @@ button:hover {
 /* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     .hero {
-        height: auto; /* Allow height to adjust for content */
-        padding: 20px 10px; /* Reduce padding for smaller screens */
+        height: auto; 
+        padding: 20px 10px; 
         margin-top: 75px;
-        margin-bottom: 100px; /* Adjust bottom margin for smaller screens */
+        margin-bottom: 100px; 
     }
 
     .hero-content {
         flex-direction: column;
         text-align: center;
         padding: 0 20px;
-        align-items: center; /* Center the items horizontally */
+        align-items: center;
     }
 
     .personal-img {
-        margin: 0 auto 20px; /* Center image and add bottom margin */
-        width: 100%; /* Make image full width on smaller screens */
-        max-width: 400px; /* Set a maximum width for the image */
-        max-height: none; /* Remove max-height constraint for smaller screens */
+        margin: 0 auto 20px; 
+        width: 100%;
+        max-width: 400px;
+        max-height: none;
     }
 
     .personal-img img {
-        height: auto; /* Ensure the image scales correctly on smaller screens */
-        width: 100%; /* Make image full width */
-        display: block; /* Ensure the image is displayed as a block */
+        height: auto; 
+        width: 100%;
+        display: block;
     }
 
     .hero-text {
-        max-width: 100%; /* Ensure text container takes full width on smaller screens */
-        padding: 0 10px; /* Add padding to center the text */
-        text-align: center; /* Center-align text container */
-        margin: 0 auto; /* Ensure the container itself is centered */
+        max-width: 100%;
+        padding: 0 10px; 
+        text-align: center;
+        margin: 0 auto;
     }
 
     .hero-text h1 {
         font-size: 2em;
-        margin-bottom: 15px; /* Adjust margin for smaller screens */
+        margin-bottom: 15px;
     }
 
     .hero-text p {
-        text-align: center; /* Center-align the paragraph text */
-        margin: 20px auto 40px auto; /* Center the paragraph and adjust margin */
-        max-width: 100%; /* Ensure the paragraph takes full width */
+        text-align: center;
+        margin: 20px auto 40px auto; 
+        max-width: 100%;
     }
 
     button {
-        padding: 15px 40px; /* Adjust button padding for smaller screens */
+        padding: 15px 40px; 
         border-radius: 60px;
     }
 }
@@ -325,15 +325,15 @@ button:hover {
 /* Cards Section */
 .cards-section {
     padding: 40px 20px;
-    background-color: #FFFFF0; /* Background color to match the theme */
-    margin-bottom: 100px; /* Add space between cards section and footer */
+    background-color: #FFFFF0;
+    margin-bottom: 100px;
 }
 
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Gap between cards */
+    gap: 20px;
 }
 
 .card-work {
@@ -346,7 +346,7 @@ button:hover {
     margin: 30px auto;
     display: flex;
     overflow: hidden;
-    flex-direction: column; /* Default to column layout for responsiveness */
+    flex-direction: column;
 }
 
 .card-work h2 {
@@ -367,21 +367,21 @@ button:hover {
 
 .card-work p {
     color: var(--text-color);
-    margin-bottom: auto; /* Push the paragraph up */
+    margin-bottom: auto;
 }
 
 /* Content container within the card */
 .card-content {
     display: flex;
-    flex-direction: column; /* Stack content vertically by default */
+    flex-direction: column;
     align-items: stretch;
     width: 100%;
-    height: 100%; /* Ensure the content covers the full height */
+    height: 100%;
 }
 
 /* Image container */
 .card-image {
-    width: 100%; /* Full width for responsive layout */
+    width: 100%;
     flex: 1;
     overflow: hidden;
 }
@@ -406,7 +406,7 @@ button:hover {
 .card-text ul.skills {
     list-style: none;
     padding: 0;
-    margin: 0 0 20px 0; /* Add margin for spacing */
+    margin: 0 0 20px 0;
     font-size: 0.8em;
     font-weight: 500;
     display: flex;
@@ -428,8 +428,8 @@ button:hover {
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: auto; /* Push the button to the bottom */
-    align-self: flex-start; /* Align button to start */
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 /* Button hover effect */
@@ -440,11 +440,11 @@ button:hover {
 /* Responsive Styling */
 @media (min-width: 768px) {
     .card-work {
-        flex-direction: row; /* Side-by-side layout for larger screens */
+        flex-direction: row; 
     }
 
     .card-content {
-        flex-direction: row; /* Side-by-side content for larger screens */
+        flex-direction: row; 
     }
 
     .card-image {
@@ -453,17 +453,17 @@ button:hover {
 
     .card-text {
         flex: 1;
-        padding: 20px 30px; /* Adjust padding for larger screens */
+        padding: 20px 30px;
     }
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--primary-color); /* Teal background */
+    background-color: var(--primary-color);
     color: #FFFFFF;
-    padding: 20px 0; /* Adjust padding */
-    text-align: center; /* Center text by default */
-    width: 100%; /* Ensure full width */
+    padding: 20px 0;
+    text-align: center; 
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -477,7 +477,7 @@ h2 {
 }
 
 .footer-contact p {
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 20px; 
     font-size: 1em;
 }
 
@@ -485,7 +485,7 @@ h2 {
     font-weight: 600;
     font-size: 1em;
     color: #FFFFFF;
-    background-color: var(--secondary-color); /* Slightly darker teal for button */
+    background-color: var(--secondary-color); 
     padding: 10px 40px;
     margin-bottom: 20px;
     border: none;
@@ -495,11 +495,11 @@ h2 {
 }
 
 .footer-contact button:hover {
-    background-color: var(--hover-color); /* Even darker teal on hover */
+    background-color: var(--hover-color);
 }
 
 .footer-social {
-    text-align: center; /* Center the social section */
+    text-align: center; 
 }
 
 .footer-social ul {
@@ -523,12 +523,12 @@ h2 {
 }
 
 .footer-social ul li a:hover {
-    color: var(--highlight-color); /* Light orange on hover */
+    color: var(--highlight-color);
 }
 
 .footer-legal p {
     font-size: 0.875em;
-    margin-top: 10px; /* Reduced margin */
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -537,8 +537,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1000px; /* Set maximum width */
-    margin: 0 auto; /* Center the wrapper */
+    max-width: 1000px; 
+    margin: 0 auto; 
     box-sizing: border-box;
 }
 
@@ -552,34 +552,34 @@ h2 {
 
 .footer-inner-wrapper > section {
     flex: 1;
-    min-width: 200px; /* Minimum width for responsiveness */
-    margin: 20px; /* Margin for spacing */
+    min-width: 200px;
+    margin: 20px;
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
     footer {
-        padding: 30px 20px; /* Increased padding for mobile view */
+        padding: 30px 20px;
     }
+}
 
     .footer-contact {
-        margin-bottom: 30px; /* Increased margin for better spacing */
+        margin-bottom: 30px; 
     }
 
     .footer-social {
-        margin-bottom: 30px; /* Increased margin for better spacing */
+        margin-bottom: 30px; 
     }
 
     .footer-legal {
-        margin-top: 20px; /* Increased margin for better spacing */
-    }
+        margin-top: 20px; 
 
     .footer-social ul {
-        flex-direction: column; /* Stack social links vertically */
+        flex-direction: column; 
     }
 
     .footer-social ul li {
-        margin: 5px 0; /* Adjust margin for vertical alignment */
+        margin: 5px 0; 
     }
 }
 
@@ -592,17 +592,17 @@ h2 {
     }
 
     footer {
-        padding: 30px 40px; /* Adjusted padding for larger viewports */
+        padding: 30px 40px; 
     }
 }
 
 @media (min-width: 1024px) {
     footer {
-        padding: 30px 40px; /* Adjusted padding for larger viewports */
+        padding: 30px 40px;
     }
 
     .footer-contact, .footer-social, .footer-legal {
-        width: 30%; /* Ensure each section takes up equal width */
+        width: 30%; 
         margin-right: 3.33%;
     }
 
@@ -613,6 +613,6 @@ h2 {
     }
 
     .footer-social ul {
-        justify-content: center; /* Center the social links */
+        justify-content: center;
     }
 }
