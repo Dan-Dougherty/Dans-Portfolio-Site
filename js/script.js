@@ -55,6 +55,41 @@ $(document).ready(function() {
     });
 });
 
+// Contact Form
+
+$(document).ready(function() {
+    $('.contact-form').on('submit', function(e) {
+        e.preventDefault();
+
+        // Simple validation
+        var isValid = true;
+        $('.contact-form input, .contact-form textarea').each(function() {
+            if ($(this).val() === '') {
+                isValid = false;
+                $(this).css('border-color', 'red');
+            } else {
+                $(this).css('border-color', '#ccc');
+            }
+        });
+
+        // Email validation
+        var email = $('#email').val();
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|net|org|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum)$/;
+        if (!emailPattern.test(email)) {
+            isValid = false;
+            $('#email-error').show();
+        } else {
+            $('#email-error').hide();
+        }
+
+        if (isValid) {
+            
+            $('.contact-form').hide();
+            $('.contact-container').append('<p>Thank you for your message! I will get back to you soon.</p>');
+        }
+    });
+});
+
 // Typewriter
 
 $(document).ready(function() {
@@ -68,9 +103,9 @@ $(document).ready(function() {
             index++;
             setTimeout(typeWriter, speed);
         } else {
-            $('#typewriter').addClass('finished'); // Add class to remove blinking caret
-            $('#hero-paragraph').addClass('visible'); // Show the paragraph
-            $('#hero-button').addClass('visible'); // Show the button
+            $('#typewriter').addClass('finished');
+            $('#hero-paragraph').addClass('visible');
+            $('#hero-button').addClass('visible');
         }
     }
 

@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Dan Dougherty - UX Designer</title>
-
-    <!--Links-->
-        <link rel="stylesheet" type="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" type="text/CSS" href="css/style.css">
-
-    <!--Font Families-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Dan Dougherty - UX Designer</title>
+        
+        <!-- Meta Description -->
+        <meta name="description" content="Get in touch with Dan Dougherty, a professional UX Designer based in Grand Rapids. Learn more about his skills, experience, and how he can help you with your design needs.">
+    
+        <!-- Meta Keywords -->
+        <meta name="keywords" content="Dan Dougherty, Contact, UX Designer, User Experience, UI Design, Grand Rapids">
+    
+        <!-- Open Graph Tags for social media -->
+        <meta property="og:title" content="Contact Dan Dougherty - UX Designer">
+        <meta property="og:description" content="Get in touch with Dan Dougherty, a professional UX Designer based in Grand Rapids. Learn more about his skills, experience, and how he can help you with your design needs.">
+        <meta property="og:image" content="img/mockuuups-woman-working-on-dell-display-mockup@2x.png"> 
+        <meta property="og:url" content="http://www.mydomain.com/contact.html">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Contact Dan Dougherty - UX Designer">
+        <meta name="twitter:description" content="Get in touch with Dan Dougherty, a professional UX Designer based in Grand Rapids. Learn more about his skills, experience, and how he can help you with your design needs.">
+        <meta name="twitter:image" content="img/mockuuups-woman-working-on-dell-display-mockup@2x.png">
+    
+        <!-- Schema.org Markup -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Dan Dougherty",
+          "jobTitle": "UX Designer",
+          "url": "http://www.mydomain.com/contact.html",
+          "sameAs": [
+            "https://www.linkedin.com/in/yourprofile",
+            "https://github.com/yourprofile",
+            "https://twitter.com/yourprofile"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Grand Rapids",
+            "addressRegion": "MI",
+            "addressCountry": "US"
+          },
+          "description": "Get in touch with Dan Dougherty, a professional UX Designer based in Grand Rapids. Learn more about his skills, experience, and how he can help you with your design needs."
+        }
+        </script>
+    
+        <!-- Author meta tag -->
+        <meta name="author" content="Dan Dougherty">
+    
+        <!-- Favicon
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+         -->
+    
+        <!-- Links -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+        <!-- Font Families -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!--Viewport-->
+    
+        <!-- Viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    </head>
 
 
     <!--Start Body-->
@@ -59,7 +108,30 @@
 
         <!--Main Section Starts-->
         <main>
-            
+            <section class="contact">
+                <div class="contact-container">
+                    <h1>Contact Me</h1>
+                    <p>Feel free to reach out to me through the form below or via email at 
+                        <a href="mailto:dandougherty1011@gmail.com">dandougherty1011@gmail.com</a>.</p>
+                    
+                    <form class="contact-form" action="send_email.php" method="post">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <small id="email-error" style="color: red; display: none;">Please enter a valid email address.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
         </main>
         <!--End Main Section-->
 
@@ -72,7 +144,7 @@
                     <section class="footer-contact">
                         <h2>Get in Touch</h2>
                         <p>If you're interested in working together or just want to say hello, don't hesitate to reach out!</p>
-                        <button onclick="location.href='mailto:dandougherty1011@gmail.com'" target="_blank" rel="noopener noreferrer">Contact Me</button>
+                        <button onclick="location.href='contact.html'" target="_blank" rel="noopener noreferrer">Contact Me</button>
                     </section>
                     <section class="footer-social">
                         <h2>Follow Me</h2>

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Dan Dougherty - UX Designer</title>
-        
+    
         <!-- Meta Description -->
         <meta name="description" content="Learn more about Dan Dougherty, a dedicated UX Designer with a passion for creating user-friendly digital solutions through user research, usability testing, and wireframing.">
     
@@ -14,30 +14,55 @@
         <!-- Open Graph Tags for social media -->
         <meta property="og:title" content="About Dan Dougherty - UX Designer">
         <meta property="og:description" content="Learn more about Dan Dougherty, a dedicated UX Designer with a passion for creating user-friendly digital solutions through user research, usability testing, and wireframing.">
-        <meta property="og:image" content="img/about-og-image.jpg"> <!-- Replace with actual image URL -->
+        <meta property="og:image" content="img/mockuuups-woman-working-on-dell-display-mockup@2x.png">
         <meta property="og:url" content="http://www.mydomain.com/about.html">
         <meta property="og:type" content="website">
-    
+
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="About Dan Dougherty - UX Designer">
-        <meta name="twitter:description" content="Learn more about Dan Dougherty, a dedicated UX Designer with a passion for creating user-friendly digital solutions through user research, usability testing, and wireframing.">
-        <meta name="twitter:image" content="img/about-twitter-image.jpg"> <!-- Replace with actual image URL -->
+        <meta name="twitter:title" content="Dan Dougherty's UX Design Portfolio">
+        <meta name="twitter:description" content="Explore innovative UX design projects and professional insights from Dan Dougherty.">
+        <meta name="twitter:image" content="img/mockuuups-woman-working-on-dell-display-mockup@2x.png"> 
+    
     
         <!-- Author meta tag -->
         <meta name="author" content="Dan Dougherty">
     
-        <!--Links-->
-        <link rel="stylesheet" type="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" type="text/CSS" href="css/ABOUT.css">
+        <!-- Schema.org Markup -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Dan Dougherty",
+          "jobTitle": "UX Designer",
+          "url": "http://www.mydomain.com/about.html",
+          "sameAs": [
+            "https://www.linkedin.com/in/yourprofile",
+            "https://github.com/yourprofile",
+            "https://twitter.com/yourprofile"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Grand Rapids",
+            "addressRegion": "MI",
+            "addressCountry": "US"
+          },
+          "description": "Learn more about Dan Dougherty, a dedicated UX Designer with a passion for creating user-friendly digital solutions through user research, usability testing, and wireframing."
+        }
+        </script>
     
-        <!--Font Families-->
+        <!-- Favicon
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+         -->
+    
+        <!-- Links -->
+        <link rel="stylesheet" type="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" type="text/CSS" href="css/about.css">
+    
+        <!-- Font Families -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-        <!--Viewport-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
 <body>
@@ -79,7 +104,7 @@
     <!--Main Section Starts-->
     <main>
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content fadeIn">
                 <div class="personal-img">
                     <picture>
                         <source srcset="img/Profile Img.jpg" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
@@ -176,7 +201,7 @@
                 <section class="footer-contact">
                     <h2>Get in Touch</h2>
                     <p>If you're interested in working together or just want to say hello, don't hesitate to reach out!</p>
-                    <button onclick="location.href='mailto:dandougherty1011@gmail.com'" target="_blank" rel="noopener noreferrer">Contact Me</button>
+                    <button onclick="location.href='contact.html'" target="_blank" rel="noopener noreferrer">Contact Me</button>
                 </section>
                 <section class="footer-social">
                     <h2>Follow Me</h2>

@@ -2,7 +2,7 @@
     --primary-color: rgb(0, 128, 128);
     --secondary-color: #004D4D;
     --hover-color: #002F2F;
-    --light-bg-color: #F7F7F7;
+    --light-bg-color: #FFFFF0;
     --highlight-color: #FFE5B4;
     --highlight-hover-color: #FFD494;
     --text-color: #333333;
@@ -571,6 +571,108 @@ button:hover {
 
     .card-content {
         flex-direction: column;
+    }
+}
+
+
+/* Contact Page Styling */
+
+.contact {
+    padding: 60px 20px;
+    background-color: var(--light-bg-color); /* Light background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff; /* White background for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center;
+    animation: fadeIn 1.5s ease; /* Add fade-in animation */
+}
+
+.contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.form-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Add inner shadow */
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
