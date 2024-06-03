@@ -248,6 +248,8 @@ nav ul li a:hover {
     max-height: 600px;
     overflow: hidden;
     border-radius: var(--border-radius);
+    animation-duration: 6s;
+    animation-delay: 0.1s;
 }
 
 .personal-img img {

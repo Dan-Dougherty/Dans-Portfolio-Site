@@ -58,6 +58,9 @@
         <!-- Links -->
         <link rel="stylesheet" type="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" type="text/CSS" href="css/about.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     
         <!-- Font Families -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,8 +107,8 @@
     <!--Main Section Starts-->
     <main>
         <section class="hero">
-            <div class="hero-content fadeIn">
-                <div class="personal-img">
+            <div class="hero-content">
+                <div class="personal-img animate__animated animate__bounceInLeft" id="personal-img">
                     <picture>
                         <source srcset="img/Profile Img.jpg" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
                         <source srcset="img/Profile Img.jpg" media="(min-width: 768px)">
@@ -113,7 +116,7 @@
                         <img src="img/Profile Img.jpg" alt="Dan Dougherty">
                     </picture>
                 </div>
-                <div class="hero-text">
+                <div class="hero-text animate__animated animate__fadeInUp">
                     <h1>Welcome to My World!</h1>
                     <p>I'm Dan Dougherty. As a UX Designer with a rich background in customer service, I've translated my passion for serving others
                         into creating user-friendly digital solutions. My training at CareerFoundry has equipped me with a skill set that includes user research, 
@@ -126,23 +129,23 @@
             </div>
         </section>
 
-        <section class="attributes hidden">
-            <div class="attributes-container">
+        <section class="attributes">
+            <div class="attributes-container" data-aos="zoom-in" data-aos-duration="600">
                 <h2>Unique Attributes:</h2>
-                <div class="card hidden">
+                <div class="card" data-aos="zoom-in" data-aos-duration="600">
                     <h3>Problem Solving</h3>
                     <p>With extensive experience in the fast-paced customer service industry, particularly in restaurants, 
                         I have honed a robust ability to quickly identify and resolve issues, ensuring customer satisfaction and operational efficiency. 
                         This background has equipped me with a unique perspective in UX design, where anticipating user needs and solving usability challenges 
                         are crucial.</p>
                 </div>
-                <div class="card hidden">
+                <div class="card" data-aos="zoom-in" data-aos-duration="600">
                     <h3>Collaboration</h3>
                     <p>My enthusiasm for teamwork is rooted in my belief that diverse ideas lead to innovative solutions. 
                         I thrive in collaborative environments and often take the lead in projects, ensuring that multiple perspectives are considered 
                         and that the iterative design process is thorough and effective.</p>
                 </div>
-                <div class="card hidden">
+                <div class="card" data-aos="zoom-in" data-aos-duration="600">
                     <h3>Continuous Learning</h3>
                     <p>As a lifelong learner, I immerse myself in the ever-evolving field of UX/UI design by regularly engaging with industry articles and blogs. 
                         This commitment keeps me updated on the latest trends and technologies, enabling me to apply contemporary design practices to 
@@ -151,10 +154,10 @@
             </div>
         </section>
 
-        <section class="skills-tools hidden">
-            <div class="skills-tools-container">
+        <section class="skills-tools">
+            <div class="skills-tools-container" data-aos="zoom-in" data-aos-duration="600">
                 <h2>Skills & Tools</h2>
-                <div class="card hidden">
+                <div class="card" data-aos="zoom-in" data-aos-duration="600">
                     <h3>UX/UI Skills</h3>
                     <ul class="skills-list">
                         <li>Proficient in using Adobe XD for low to high-fidelity prototyping and wireframing.</li>
@@ -162,7 +165,7 @@
                         <li>Experienced in structuring information architecture, all critical in crafting intuitive user experiences.</li>
                     </ul>
                 </div>
-                <div class="card hidden">
+                <div class="card" data-aos="zoom-in" data-aos-duration="600">
                     <h3>Tools</h3>
                     <ul class="tools-list">
                         <li>Proficient in using Adobe XD for low to high-fidelity prototyping and wireframing.</li>
@@ -170,7 +173,7 @@
                         <li>Comfortable with Figma for collaborative design and real-time feedback integration.</li>
                     </ul>
                 </div>
-                <div class="card hidden">
+                <div class="card" data-aos="zoom-in" data-aos-duration="600">
                     <h3>Frontend Skills</h3>
                     <ul class="frontend-list">
                         <li>Comfortable with HTML, CSS, and JavaScript, which enhances my ability to design with technical feasibility in mind.</li>
@@ -179,10 +182,10 @@
             </div>
         </section>
 
-        <section class="integration hidden">
-            <div class="integration-container">
+        <section class="integration">
+            <div class="integration-container" data-aos="zoom-in" data-aos-duration="600">
                 <h2>Integration of Skills</h2>
-                <div class="card hidden">
+                <div class="card" data-aos="zoom-in" data-aos-duration="600">
                     <p>As a UX/UI designer with a solid foundation in frontend technologies, I effectively bridge the gap between design and development teams. 
                         My comprehensive skill set facilitates clear and effective communication, ensuring that designs are not only aesthetically pleasing but 
                         also technically feasible. This cross-disciplinary knowledge is crucial for maintaining project timelines and ensuring that the 
@@ -218,5 +221,10 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+
 </body>
 </html>

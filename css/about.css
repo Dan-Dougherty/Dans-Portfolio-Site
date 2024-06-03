@@ -251,6 +251,8 @@ nav ul li a:hover {
     max-height: 600px;
     overflow: hidden;
     border-radius: var(--border-radius);
+    animation-duration: 3s; 
+    animation-delay: 0.1s; 
 }
 
 .personal-img img {
@@ -265,6 +267,8 @@ nav ul li a:hover {
     max-width: 60%;
     padding-left: 40px;
     text-align: left;
+    animation-duration: 2s; 
+    animation-delay: .3s; 
 }
 
 .hero-text h1 {
@@ -377,18 +381,6 @@ button:hover {
     button {
         padding: 15px 60px; 
         border-radius: 30px;
-    }
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
