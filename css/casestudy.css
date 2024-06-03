@@ -151,6 +151,10 @@ nav ul li a:hover {
     color: var(--highlight-color);
 }
 
+.current {
+    color: var(--highlight-color);
+}
+
 /* Hamburger menu styles */
 .hamburger-menu {
     display: none;
