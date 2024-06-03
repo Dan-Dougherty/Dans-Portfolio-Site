@@ -56,19 +56,20 @@
                     </svg>
                 </a>
             </div>
-
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-
+    
             <!-- Navigation -->
             <nav>
                 <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="files/Intro to UX Design 1.8 Future Resume.pdf" target="_blank">Resume</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#work">Work</a></li>
+                    <li><a href="index.html#scroll" id="work-link" data-target="scroll">Work</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -100,23 +101,23 @@
             </div>
         </section>
 
-        <section class="attributes">
+        <section class="attributes hidden">
             <div class="attributes-container">
                 <h2>Unique Attributes:</h2>
-                <div class="card">
+                <div class="card hidden">
                     <h3>Problem Solving</h3>
                     <p>With extensive experience in the fast-paced customer service industry, particularly in restaurants, 
                         I have honed a robust ability to quickly identify and resolve issues, ensuring customer satisfaction and operational efficiency. 
                         This background has equipped me with a unique perspective in UX design, where anticipating user needs and solving usability challenges 
                         are crucial.</p>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <h3>Collaboration</h3>
                     <p>My enthusiasm for teamwork is rooted in my belief that diverse ideas lead to innovative solutions. 
                         I thrive in collaborative environments and often take the lead in projects, ensuring that multiple perspectives are considered 
                         and that the iterative design process is thorough and effective.</p>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <h3>Continuous Learning</h3>
                     <p>As a lifelong learner, I immerse myself in the ever-evolving field of UX/UI design by regularly engaging with industry articles and blogs. 
                         This commitment keeps me updated on the latest trends and technologies, enabling me to apply contemporary design practices to 
@@ -125,10 +126,10 @@
             </div>
         </section>
 
-        <section class="skills-tools">
+        <section class="skills-tools hidden">
             <div class="skills-tools-container">
                 <h2>Skills & Tools</h2>
-                <div class="card">
+                <div class="card hidden">
                     <h3>UX/UI Skills</h3>
                     <ul class="skills-list">
                         <li>Proficient in using Adobe XD for low to high-fidelity prototyping and wireframing.</li>
@@ -136,7 +137,7 @@
                         <li>Experienced in structuring information architecture, all critical in crafting intuitive user experiences.</li>
                     </ul>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <h3>Tools</h3>
                     <ul class="tools-list">
                         <li>Proficient in using Adobe XD for low to high-fidelity prototyping and wireframing.</li>
@@ -144,7 +145,7 @@
                         <li>Comfortable with Figma for collaborative design and real-time feedback integration.</li>
                     </ul>
                 </div>
-                <div class="card">
+                <div class="card hidden">
                     <h3>Frontend Skills</h3>
                     <ul class="frontend-list">
                         <li>Comfortable with HTML, CSS, and JavaScript, which enhances my ability to design with technical feasibility in mind.</li>
@@ -153,10 +154,10 @@
             </div>
         </section>
 
-        <section class="integration">
+        <section class="integration hidden">
             <div class="integration-container">
                 <h2>Integration of Skills</h2>
-                <div class="card">
+                <div class="card hidden">
                     <p>As a UX/UI designer with a solid foundation in frontend technologies, I effectively bridge the gap between design and development teams. 
                         My comprehensive skill set facilitates clear and effective communication, ensuring that designs are not only aesthetically pleasing but 
                         also technically feasible. This cross-disciplinary knowledge is crucial for maintaining project timelines and ensuring that the 
@@ -180,9 +181,8 @@
                 <section class="footer-social">
                     <h2>Follow Me</h2>
                     <ul>
-                        <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="www.linkedin.com/in/daniel-joseph-dougherty">LinkedIn</a></li>
+                        <li><a href="https://github.com/yourusername" target="_blank" rel="https://github.com/Dan-Dougherty">GitHub</a></li>
                     </ul>
                 </section>
             </div>
@@ -191,7 +191,7 @@
             </section>
         </div>
     </footer>
-    <!--End Footer-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

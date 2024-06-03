@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Explore innovative UX design projects and professional insights from Dan Dougherty.">
     <meta name="twitter:image" content="img/image-goes-here">
     <link rel="stylesheet" type="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" type="text/CSS" href="css/STYLE.css">
+    <link rel="stylesheet" type="text/CSS" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -37,19 +37,20 @@
                     </svg>
                 </a>
             </div>
-
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-
+    
             <!-- Navigation -->
             <nav>
                 <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="files/Intro to UX Design 1.8 Future Resume.pdf" target="_blank">Resume</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#work">Work</a></li>
+                    <li><a href="#scroll" id="work-link" data-target="scroll">Work</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -59,7 +60,7 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="personal-img">
+                <div class="personal-img" id="personal-img">
                     <picture>
                         <source srcset="img/Profile Img.jpg" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
                         <source srcset="img/Profile Img.jpg" media="(min-width: 768px)">
@@ -68,17 +69,17 @@
                     </picture>
                 </div>
                 <div class="hero-text">
-                    <h1>Hello! I’m Dan Dougherty</h1>
-                    <p>I am a budding UX Designer driven by a passion for user-centered design and a history in customer service. I specialize in user research, testing, and creating intuitive wireframes that enhance user experiences. Explore my work and see how I make technology user-friendly and visually appealing.</p>
-                    <button onclick="location.href='about.html'">Learn More</button>
+                    <h1 id="typewriter">Hello! I’m Dan Dougherty</h1>
+                    <p id="hero-paragraph">I am a budding UX Designer driven by a passion for user-centered design and a history in customer service. I specialize in user research, testing, and creating intuitive wireframes that enhance user experiences. Explore my work and see how I make technology user-friendly and visually appealing.</p>
+                    <button id="hero-button" onclick="location.href='about.html'">Learn More</button>
                 </div>
             </div>
         </section>
 
-        <section class="cards-section">
-            <div class="cards-container">
+        <section class="cards-section" id="scroll">
+            <div id="work" class="cards-container">
                 <!-- First Card -->
-                <div class="card-work" id="work">
+                <div class="card-work hidden">
                     <div class="card-content">
                         <!-- Image container -->
                         <div class="card-image">
@@ -107,7 +108,7 @@
                 <!-- End First Card -->
 
                 <!-- Second Card -->
-                <div class="card-work">
+                <div class="card-work hidden">
                     <div class="card-content">
                         <!-- Image container -->
                         <div class="card-image">
@@ -138,7 +139,7 @@
                 <!-- End Second Card -->
 
                 <!-- Third Card -->
-                <div class="card-work">
+                <div class="card-work hidden">
                     <div class="card-content">
                         <!-- Image container -->
                         <div class="card-image">
@@ -169,7 +170,7 @@
                 <!-- End Third Card -->
 
                 <!-- Fourth Card -->
-                <div class="card-work">
+                <div class="card-work hidden">
                     <div class="card-content">
                         <!-- Image container -->
                         <div class="card-image">
@@ -215,9 +216,8 @@
                 <section class="footer-social">
                     <h2>Follow Me</h2>
                     <ul>
-                        <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="www.linkedin.com/in/daniel-joseph-dougherty">LinkedIn</a></li>
+                        <li><a href="https://github.com/yourusername" target="_blank" rel="https://github.com/Dan-Dougherty">GitHub</a></li>
                     </ul>
                 </section>
             </div>
@@ -226,6 +226,7 @@
             </section>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
 
 </body>

@@ -52,17 +52,20 @@
                     </svg>
                 </a>
             </div>
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+    
             <!-- Navigation -->
             <nav>
                 <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="files/Intro to UX Design 1.8 Future Resume.pdf" target="_blank">Resume</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#work">Work</a></li>
+                    <li><a href="index.html#scroll" id="work-link" data-target="scroll">Work</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -101,9 +104,8 @@
                 <section class="footer-social">
                     <h2>Follow Me</h2>
                     <ul>
-                        <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="www.linkedin.com/in/daniel-joseph-dougherty">LinkedIn</a></li>
+                        <li><a href="https://github.com/yourusername" target="_blank" rel="https://github.com/Dan-Dougherty">GitHub</a></li>
                     </ul>
                 </section>
             </div>
@@ -112,8 +114,7 @@
             </section>
         </div>
     </footer>
-    <!-- End Footer -->
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>
