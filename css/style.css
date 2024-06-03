@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #008080;
+    --primary-color: rgb(0, 128, 128);
     --secondary-color: #004D4D;
     --hover-color: #002F2F;
     --light-bg-color: #F7F7F7;
@@ -82,8 +82,11 @@ header {
     background-color: var(--primary-color);
     padding: 20px 0;
     color: #FFFFFF;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
+    background: var(--primary-color);
+    width: 100%;
 }
 
 /* Container for centering content and setting max-width */
@@ -153,12 +156,13 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 0; 
-    position: absolute; 
-    right: 20px; 
+    margin-right: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 1001;
 }
 
-.hamburger-menu span {
+.hamburger-menu .bar {
     width: 25px;
     height: 3px;
     background-color: #FFFFFF;
@@ -166,12 +170,19 @@ nav ul li a:hover {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        justify-content: space-between;
-        padding: 0 20px; 
-    }
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
 
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -10px);
+}
+
+@media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
     }
@@ -179,13 +190,17 @@ nav ul li a:hover {
     nav ul {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background-color: var(--primary-color);
+        height: 100%;
+        background-color: rgba(0, 128, 128, 0.95); /* 95% opacity */
         text-align: center;
-        padding: 10px 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: opacity 0.3s ease;
     }
 
     nav ul.open {
@@ -193,7 +208,7 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 20px 0;
     }
 }
 
@@ -718,4 +733,66 @@ h2 {
     .footer-social ul {
         justify-content: center;
     }
+}
+
+/* CSS for typewriter effect */
+#typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid #333;
+    white-space: nowrap;
+    animation: blink-caret .75s step-end infinite;
+}
+
+#typewriter.finished {
+    border-right: none;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #333 }
+}
+
+/* Initial state for the paragraph */
+#hero-paragraph {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Visible state for the paragraph */
+#hero-paragraph.visible {
+    opacity: 1;
+}
+
+/* Initial state for the button */
+#hero-button {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Visible state for the button */
+#hero-button.visible {
+    opacity: 1;
+}
+
+/* Initial state for the image */
+#personal-img {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+/* Visible state for the image */
+#personal-img.visible {
+    opacity: 1;
+}
+
+
+/* CSS for hidden elements */
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.fade-in {
+    opacity: 1 !important;
 }
