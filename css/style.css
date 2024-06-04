@@ -1,8 +1,8 @@
 :root {
-    --primary-color: rgb(0, 128, 128);
+    --primary-color: #008080;
     --secondary-color: #004D4D;
     --hover-color: #002F2F;
-    --light-bg-color: #FFFFF0;
+    --light-bg-color: #F7F7F7;
     --highlight-color: #FFE5B4;
     --highlight-hover-color: #FFD494;
     --text-color: #333333;
@@ -199,7 +199,7 @@ nav ul li a:hover {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 128, 128, 0.95); /* 95% opacity */
+        background-color: rgba(0, 128, 128, 0.95);
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -268,7 +268,7 @@ nav ul li a:hover {
 
 .hero-text h1 {
     font-size: 2.5em;
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .hero-text p {
@@ -380,7 +380,6 @@ button:hover {
 }
 
 
-
 /* Cards Section */
 .cards-section {
     padding: 40px 30px;
@@ -408,12 +407,12 @@ button:hover {
     display: flex;
     overflow: hidden;
     flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-work:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 10px rgba(0, 128, 128, .3);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-work h2 {
@@ -449,7 +448,7 @@ button:hover {
 /* Image container */
 .card-image {
     width: 100%;
-    flex: 1;
+    flex: 0 0 auto;
     overflow: hidden;
 }
 
@@ -465,7 +464,7 @@ button:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -491,61 +490,19 @@ button:hover {
     background-color: var(--highlight-color);
     color: #444444;
     border: none;
-    padding: 10px 40px;
-    border-radius: var(--border-radius);
+    min-width: 100%;
+    padding: 15px 0;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 30px;
-    align-self: flex-start;
+    align-self: center;
+    margin-top: 40px;
 }
 
 /* Button hover effect */
 .card-work button:hover {
     background-color: var(--highlight-hover-color);
 }
-
-.svg-container {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-    margin-top: 100px;
- }
-
-.text-overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-    color: black;
-    text-align: center;
-}
- 
- .svg-container svg {
-    width: 100%;
-    height: auto;
- }
-
- @keyframes needleAnimation {
-    0% { transform: rotate(-230deg); transform-origin: 560.321px 192.623px; }
-    100% { transform: rotate(0deg); transform-origin: 560.321px 192.623px; }
-}
-
-#Speedometer polygon {
-    animation: needleAnimation 2.2s infinite;
-}
-
-@keyframes flashingBackground {
-    0%, 100% { fill: url(#blueGradient); }
-    50% { fill: url(#redGradient); }
-}
-
-#flashingBackground {
-    animation: flashingBackground 1s infinite;
-}
- 
 
 /* Responsive Styling */
 @media (min-width: 768px) {
@@ -565,33 +522,55 @@ button:hover {
         flex: 1;
         padding: 20px 30px;
     }
+
+    .card-work button {
+        max-width: auto;
+        padding: 10px 40px;
+        border-radius: 30px;
+        align-self: center;
+        margin-top: 20px;
+    }
 }
 
 @media (min-width: 1024px) {
     .cards-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        row-gap: 60px;
     }
 
     .card-work {
         flex-direction: column;
         margin: 20px;
         width: auto;
-        max-width: 560px;
+        max-width: none;
+        height: auto;
     }
 
     .card-content {
         flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .card-work button {
+        min-width: auto;
+        max-width: auto;
+        padding: 10px 40px;
+        border-radius: var(--border-radius);
+        align-self: flex-start;
+        margin-top: 10px;
     }
 }
+
+
 
 
 /* Contact Page Styling */
 
 .contact {
     padding: 60px 20px;
-    background-color: var(--light-bg-color); /* Light background color */
+    background-color: var(--light-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -601,12 +580,12 @@ button:hover {
 .contact-container {
     max-width: 600px;
     width: 100%;
-    background-color: #fff; /* White background for contrast */
+    background-color: #fff; 
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    animation: fadeIn 1.5s ease; /* Add fade-in animation */
+    animation: fadeIn 1.5s ease;
 }
 
 .contact h1 {
@@ -636,7 +615,7 @@ button:hover {
 .form-group {
     width: 100%;
     margin-bottom: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .form-group label {
@@ -653,7 +632,7 @@ button:hover {
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Add inner shadow */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-group textarea {
