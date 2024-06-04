@@ -85,7 +85,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: var(--primary-color);
     width: 100%;
 }
 
@@ -94,7 +93,7 @@ header {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 40px; 
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,14 +220,12 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 160px);
+    min-height: 100vh; /* Use 100vh for full viewport height */
     padding: 0;
-    margin-top: 0px;
-    margin-bottom: 80px;
+    margin: 0;
     box-sizing: border-box;
 }
 
-/* Center the content vertically within the hero section */
 .hero-content {
     display: flex;
     align-items: center;
@@ -238,9 +235,9 @@ nav ul li a:hover {
     padding: 20px;
     flex-wrap: nowrap;
     justify-content: space-between;
+    text-align: center; /* Center text for smaller screens */
 }
 
-/* Adjust image width and margin */
 .personal-img {
     flex: 0 1 30%;
     margin-right: 20px;
@@ -248,8 +245,6 @@ nav ul li a:hover {
     max-height: 600px;
     overflow: hidden;
     border-radius: var(--border-radius);
-    animation-duration: 6s;
-    animation-delay: 0.1s;
 }
 
 .personal-img img {
@@ -269,6 +264,9 @@ nav ul li a:hover {
 .hero-text h1 {
     font-size: 2.5em;
     margin-top: 20px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .hero-text p {
@@ -293,12 +291,18 @@ button:hover {
 }
 
 /* Responsive styling for smaller screens */
-@media (max-width: 1023px) {
+
+@media (max-width: 429px) {
+    .personal-img {
+        width: 80%; /* Adjust the width for mobile devices */
+        max-width: 200px; /* Set a maximum width for the image */
+    }
+}
+
+@media (max-width: 767px) {
     .hero {
         height: auto;
         padding: 20px 10px;
-        margin-top: 75px;
-        margin-bottom: 100px;
     }
 
     .hero-content {
@@ -310,8 +314,8 @@ button:hover {
 
     .personal-img {
         margin: 0 auto 20px;
-        width: 100%;
-        max-width: 400px;
+        width: 60%; /* Adjust the width for medium devices */
+        max-width: 300px; /* Set a maximum width for the image */
         max-height: none;
     }
 
@@ -331,6 +335,63 @@ button:hover {
     .hero-text h1 {
         font-size: 2em;
         margin-bottom: 15px;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    .hero-text p {
+        text-align: center;
+        margin: 20px auto 40px auto;
+        max-width: 100%;
+    }
+
+    button {
+        padding: 15px 40px;
+        border-radius: 60px;
+    }
+}
+
+/* Responsive styling for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .personal-img {
+        margin: 0 auto 20px;
+        width: 60%; /* Adjust the width for medium devices */
+        max-width: 300px; /* Set a maximum width for the image */
+        max-height: none;
+    }
+
+    .personal-img img {
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.25em;
+        margin-bottom: 15px;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
     }
 
     .hero-text p {
@@ -391,7 +452,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -403,7 +464,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 960px;
-    margin: 30px auto;
+    margin: 0px auto;
     display: flex;
     overflow: hidden;
     flex-direction: column;
@@ -464,7 +525,7 @@ button:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensure space between text and button */
     align-items: flex-start;
 }
 
@@ -507,11 +568,11 @@ button:hover {
 /* Responsive Styling */
 @media (min-width: 768px) {
     .card-work {
-        flex-direction: row; 
+        flex-direction: row;
     }
 
     .card-content {
-        flex-direction: row; 
+        flex-direction: row;
     }
 
     .card-image {
@@ -536,12 +597,12 @@ button:hover {
     .cards-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 60px;
+        row-gap: 40px;
     }
 
     .card-work {
         flex-direction: column;
-        margin: 20px;
+        margin: 0px;
         width: auto;
         max-width: none;
         height: auto;
@@ -563,11 +624,107 @@ button:hover {
     }
 }
 
+/* Skills Section */
+.attributes,
+.skills-tools,
+.integration {
+    background-color: #FFFFF0;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+}
 
+/* Container styles for the sections */
+.attributes-container,
+.skills-tools-container,
+.integration-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+/* Section headings */
+.attributes h2,
+.skills-tools h2,
+.integration h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Card styles */
+.card {
+    background-color: #FFFFFF;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.integration-container .card {
+    margin-bottom: 80px;
+}
+
+/* Heading inside the card */
+.card h3 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Paragraph inside the card */
+.card p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Styles for the lists in the skills section */
+.skills-tools .skills-list,
+.skills-tools .tools-list,
+.skills-tools .frontend-list {
+    padding: 0;
+    margin: 0 0 20px 20px;
+    list-style-type: disc;
+}
+
+/* List item styles */
+.skills-tools .skills-list li,
+.skills-tools .tools-list li,
+.skills-tools .frontend-list li {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .attributes,
+    .skills-tools,
+    .integration {
+        padding: 20px 25px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .attributes h2,
+    .skills-tools h2,
+    .integration h2 {
+        font-size: 1.75em;
+    }
+
+    .card h3 {
+        font-size: 1.5em;
+    }
+
+    .card p,
+    .skills-tools .skills-list li,
+    .skills-tools .tools-list li,
+    .skills-tools .frontend-list li {
+        font-size: 0.9em;
+    }
+}
 
 /* Contact Page Styling */
-
 .contact {
     padding: 60px 20px;
     background-color: var(--light-bg-color);
@@ -580,7 +737,7 @@ button:hover {
 .contact-container {
     max-width: 600px;
     width: 100%;
-    background-color: #fff; 
+    background-color: #fff;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -597,6 +754,8 @@ button:hover {
 .contact p {
     font-size: 1.2em;
     margin-bottom: 40px;
+    word-break: break-word; /* Ensure long words or URLs break to fit the container */
+    overflow-wrap: break-word; /* Ensure long words or URLs wrap to fit the container */
 }
 
 .contact a {
@@ -667,13 +826,12 @@ button[type="submit"]:hover {
     }
 }
 
-
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);
     color: #FFFFFF;
     padding: 20px 0;
-    text-align: center; 
+    text-align: center;
     width: 100%;
     box-sizing: border-box;
 }
@@ -688,7 +846,7 @@ h2 {
 }
 
 .footer-contact p {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     font-size: 1em;
 }
 
@@ -696,7 +854,7 @@ h2 {
     font-weight: 600;
     font-size: 1em;
     color: #FFFFFF;
-    background-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
     padding: 10px 40px;
     margin-bottom: 20px;
     border: none;
@@ -710,7 +868,7 @@ h2 {
 }
 
 .footer-social {
-    text-align: center; 
+    text-align: center;
 }
 
 .footer-social ul {
@@ -748,8 +906,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1000px; 
-    margin: 0 auto; 
+    max-width: 1000px;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -772,25 +930,25 @@ h2 {
     footer {
         padding: 30px 20px;
     }
-}
 
     .footer-contact {
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
     }
 
     .footer-social {
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
     }
 
     .footer-legal {
-        margin-top: 20px; 
+        margin-top: 20px;
+    }
 
     .footer-social ul {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .footer-social ul li {
-        margin: 5px 0; 
+        margin: 5px 0;
     }
 }
 
@@ -803,7 +961,7 @@ h2 {
     }
 
     footer {
-        padding: 30px 40px; 
+        padding: 30px 40px;
     }
 }
 
@@ -813,7 +971,7 @@ h2 {
     }
 
     .footer-contact, .footer-social, .footer-legal {
-        width: 30%; 
+        width: 30%;
         margin-right: 3.33%;
     }
 
@@ -833,7 +991,7 @@ h2 {
     display: inline-block;
     overflow: hidden;
     border-right: .15em solid #333;
-    white-space: nowrap;
+    white-space: normal; /* Change from nowrap to normal */
     animation: blink-caret .75s step-end infinite;
 }
 
@@ -879,7 +1037,6 @@ h2 {
     opacity: 1;
 }
 
-
 /* CSS for hidden elements */
 .hidden {
     opacity: 0;
@@ -888,4 +1045,104 @@ h2 {
 
 .fade-in {
     opacity: 1 !important;
+}
+
+/* Skills Section */
+.attributes,
+.skills-tools,
+.integration {
+    background-color: #FFFFF0;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+}
+
+/* Container styles for the sections */
+.attributes-container,
+.skills-tools-container,
+.integration-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Section headings */
+.attributes h2,
+.skills-tools h2,
+.integration h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Card styles */
+.card {
+    background-color: #FFFFFF;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.integration-container .card {
+    margin-bottom: 80px;
+}
+
+/* Heading inside the card */
+.card h3 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Paragraph inside the card */
+.card p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Styles for the lists in the skills section */
+.skills-tools .skills-list,
+.skills-tools .tools-list,
+.skills-tools .frontend-list {
+    padding: 0;
+    margin: 0 0 20px 20px;
+    list-style-type: disc;
+}
+
+/* List item styles */
+.skills-tools .skills-list li,
+.skills-tools .tools-list li,
+.skills-tools .frontend-list li {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .attributes,
+    .skills-tools,
+    .integration {
+        padding: 20px 25px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .attributes h2,
+    .skills-tools h2,
+    .integration h2 {
+        font-size: 1.75em;
+    }
+
+    .card h3 {
+        font-size: 1.5em;
+    }
+
+    .card p,
+    .skills-tools .skills-list li,
+    .skills-tools .tools-list li,
+    .skills-tools .frontend-list li {
+        font-size: 0.9em;
+    }
 }
