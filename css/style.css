@@ -1178,6 +1178,10 @@ pre code {
     display: block;
 }
 
+span.example-code {
+    color: var(--primary-color);
+}
+
 /* Specific targeting for language-css and language-js */
 .language-css, .language-js {
     display: block;
