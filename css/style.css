@@ -321,7 +321,7 @@ button:hover {
         margin: 0 auto 20px;
         width: 60%; /* Adjust the width for medium devices */
         max-width: 300px; /* Set a maximum width for the image */
-        max-height: none;
+        max-height: 400px;
     }
 
     .personal-img img {
