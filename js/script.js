@@ -116,3 +116,19 @@ $(document).ready(function() {
     // Fade in the image as the typewriter effect starts
     $('#personal-img').addClass('visible');
 });
+
+// Juxtapose
+
+window.onload = function() {
+    new juxtapose.JXSlider('#juxtapose-container', [
+        {
+            src: 'img/before.jpg',
+            label: 'Before'
+        },
+        {
+            src: 'img/after.jpg',
+            label: 'After'
+        }
+    ]);
+};
+
