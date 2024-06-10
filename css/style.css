@@ -554,12 +554,14 @@ button:hover {
     width: 100%;
     flex: 0 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* Text container */
@@ -568,9 +570,95 @@ button:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure space between text and button */
+    justify-content: space-between;
     align-items: flex-start;
 }
+
+/* Game container */
+.game-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+#game-container p {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.hole.mole {
+    background-color: #8B4513;
+}
+
+.play-game-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--highlight-color);
+    color: #444444;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-game-button:hover {
+    background-color: var(--highlight-hover-color);
+}
+
+button {
+    font-weight: 600;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    padding: 10px 60px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#game-container button {
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+#score,
+#high-score {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+
 
 /* Skills list styling */
 .card-text ul.skills {

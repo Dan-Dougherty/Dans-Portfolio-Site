@@ -156,66 +156,88 @@
 
                <!-- Second Card -->
                <div class="card-work" data-aos="zoom-in" data-aos-duration="800">
-                <div class="card-content">
-                    <!-- Image container -->
-                    <div class="card-image">
-                        <picture>
-                            <source srcset="img/portfolio-screenshot-mobile.jpg" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
-                            <source srcset="img/portfolio-screenshot-mobile.jpg" media="(min-width: 768px)">
-                            <source srcset="img/portfolio-screenshot-mobile.jpg" media="(max-width: 767px)">
-                            <img src="img/portfolio-screenshot-mobile.jpg" alt="Personal Portfolio Website">
-                        </picture>
-                    </div>
-            
-                    <!-- Text container -->
-                    <div class="card-text">
-                        <ul class="skills">
-                            <li>HTML</li>/
-                            <li>CSS</li>/
-                            <li>JavaScript</li>/
-                            <li>Responsive Design</li>
-                        </ul>
-                        <h2>Personal Portfolio Website</h2>
-                        <p>A modern, responsive portfolio website designed and developed to showcase my UX design and front-end 
-                            development skills. This project highlights my expertise in creating user-friendly, visually appealing 
-                            web interfaces.</p>
-                        <button onclick="location.href='portfolio-case-study.html'">View Case Study</button>
+                    <div class="card-content">
+                        <!-- Image container -->
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="img/portfolio-screenshot-mobile.jpg" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
+                                <source srcset="img/portfolio-screenshot-mobile.jpg" media="(min-width: 768px)">
+                                <source srcset="img/portfolio-screenshot-mobile.jpg" media="(max-width: 767px)">
+                                <img src="img/portfolio-screenshot-mobile.jpg" alt="Personal Portfolio Website">
+                            </picture>
+                        </div>
+                
+                        <!-- Text container -->
+                        <div class="card-text">
+                            <ul class="skills">
+                                <li>HTML</li>/
+                                <li>CSS</li>/
+                                <li>JavaScript</li>/
+                                <li>Responsive Design</li>
+                            </ul>
+                            <h2>Personal Portfolio Website</h2>
+                            <p>A modern, responsive portfolio website designed and developed to showcase my UX design and front-end 
+                                development skills. This project highlights my expertise in creating user-friendly, visually appealing 
+                                web interfaces.</p>
+                            <button onclick="location.href='portfolio-case-study.html'">View Case Study</button>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- End Second Card -->
+                <!-- End Second Card -->
 
-                <!-- Third Card -->
+               <!-- Third Card -->
                 <div class="card-work" data-aos="zoom-in" data-aos-duration="800">
                     <div class="card-content">
                         <!-- Image container -->
                         <div class="card-image">
                             <picture>
-                                <source srcset="img/Group 12@2x.png" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
-                                <source srcset="img/Group 12.png" media="(min-width: 768px)">
-                                <source srcset="img/Group 12.png" media="(max-width: 767px)">
-                                <img src="img/Group 12.png" alt="Placeholder project">
+                                <source srcset="img/mole.png" media="(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi)">
+                                <source srcset="img/mole.png" media="(min-width: 768px)">
+                                <source srcset="img/mole.png" media="(max-width: 767px)">
+                                <img src="img/mole.png" alt="Placeholder project">
                             </picture>
                         </div>
 
                         <!-- Text container -->
                         <div class="card-text">
                             <ul class="skills">
-                                <li>List Item</li>/
-                                <li>List Item</li>/
-                                <li>List Item</li>/
-                                <li>List Item</li>
+                                <li>JavaScript</li>/
+                                <li>HTML</li>/
+                                <li>CSS</li>/
+                                <li>Interactive Design</li>
                             </ul>
-                            <h2>Placeholder Project Heading</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                                et dolore magna aliqua. Est ultricies integer quis auctor elit sed. Tincidunt arcu non sodales neque 
-                                sodales ut etiam sit amet.</p>
-                            <button onclick="location.href='#placeholder'">View Case Study</button>
+                            <h2>Whack-a-Mole Game</h2>
+                            <p>This project demonstrates my ability to create interactive web applications using JavaScript, HTML, and CSS. The Whack-a-Mole game is a fun and engaging way to showcase event handling, DOM manipulation, and dynamic content updates. Click the button below to play the game and see my skills in action.</p>
+                            <button class="play-game-button" onclick="showGame()">Play Game</button>
                         </div>
                     </div>
                 </div>
                 <!-- End Third Card -->
+
+                <!-- Game Container -->
+                <div id="game-container" class="game-container">
+                    <div id="mole-game">
+                        <h2>Whack-a-Mole</h2>
+                        <div id="game-board">
+                            <!-- Holes for moles -->
+                            <div class="hole" id="hole1"></div>
+                            <div class="hole" id="hole2"></div>
+                            <div class="hole" id="hole3"></div>
+                            <div class="hole" id="hole4"></div>
+                            <div class="hole" id="hole5"></div>
+                            <div class="hole" id="hole6"></div>
+                            <div class="hole" id="hole7"></div>
+                            <div class="hole" id="hole8"></div>
+                            <div class="hole" id="hole9"></div>
+                        </div>
+                        <p>Score: <span id="score">0</span></p>
+                        <p>High Score: <span id="high-score">0</span></p>
+                        <button onclick="hideGame()">Close Game</button>
+                    </div>
+                </div>
+                <!-- End Game Container -->     
+
 
                 <!-- Fourth Card -->
                 <div class="card-work" data-aos="zoom-in" data-aos-duration="800">

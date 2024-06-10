@@ -132,3 +132,77 @@ window.onload = function() {
     ]);
 };
 
+// Game
+
+let score = 0;
+let highScore = localStorage.getItem('highScore') || 0; // Retrieve high score from localStorage
+let activeHole = null;
+let timer;
+const initialSpeed = 700; // Set a faster initial speed
+
+// Display initial high score
+document.getElementById('high-score').innerText = highScore;
+
+function showGame() {
+    document.getElementById('game-container').style.display = 'flex'; // Use 'flex' to enable flexbox centering
+    startGame();
+}
+
+function hideGame() {
+    document.getElementById('game-container').style.display = 'none';
+    clearInterval(timer);
+    resetGame();
+}
+
+function startGame() {
+    clearInterval(timer); // Ensure any existing timer is cleared
+    timer = setInterval(() => {
+        const holes = document.querySelectorAll('.hole');
+        if (activeHole) {
+            activeHole.classList.remove('mole');
+            endGame(); // End game if the mole was not clicked
+        }
+        const randomIndex = Math.floor(Math.random() * holes.length);
+        activeHole = holes[randomIndex];
+        activeHole.classList.add('mole');
+        activeHole.onclick = whackMole;
+    }, initialSpeed);
+}
+
+function whackMole() {
+    score++;
+    document.getElementById('score').innerText = score;
+    activeHole.classList.remove('mole');
+    activeHole.onclick = null;
+    activeHole = null;
+    if (timer === null) {
+        startGame();
+    }
+}
+
+function endGame() {
+    clearInterval(timer);
+    timer = null;
+    if (activeHole) {
+        activeHole.classList.remove('mole');
+        activeHole.onclick = null;
+    }
+    if (score > highScore) {
+        highScore = score;
+        document.getElementById('high-score').innerText = highScore;
+        localStorage.setItem('highScore', highScore); // Store high score in localStorage
+    }
+    alert('Game Over! Your score: ' + score + '. Click on a mole to restart.');
+    resetGame();
+}
+
+function resetGame() {
+    score = 0;
+    document.getElementById('score').innerText = score;
+    const holes = document.querySelectorAll('.hole');
+    holes.forEach(hole => {
+        hole.classList.remove('mole');
+        hole.onclick = null;
+    });
+    activeHole = null;
+}
