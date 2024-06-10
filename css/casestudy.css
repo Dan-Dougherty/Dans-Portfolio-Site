@@ -238,7 +238,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 90%;
+    width: 100%; /* Ensure container takes full width */
+    max-width: 1000px; /* Set a max-width for the container */
+    margin: 0 auto; /* Center the container */
     box-sizing: border-box;
 }
 
@@ -268,10 +270,9 @@ main {
     .case-study {
         max-width: 100%;
         margin: 0 auto;
-        padding: 20px 0px 20px 0px;
+        padding: 20px 0;
     }
 }
-
 
 
 /* Footer Styles */
@@ -432,14 +433,4 @@ h2 {
     .footer-social ul {
         justify-content: center;
     }
-}
-
-/* CSS for hidden elements */
-.hidden {
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.fade-in {
-    opacity: 1 !important;
 }
