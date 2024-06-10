@@ -59,12 +59,14 @@ h4 {
 }
 
 /* Main button styling */
-button {
+button, .resume-button {
+    display: inline-block;
     font-weight: 600;
     font-size: 1em;
     color: #FFFFFF;
     background-color: var(--primary-color);
-    padding: 10px 60px;
+    padding: 10px 20px;
+    text-decoration: none;
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -72,7 +74,7 @@ button {
 }
 
 /* Hover effect for button */
-button:hover {
+button:hover, .resume-button:hover {
     background-color: var(--secondary-color);
     transform: scale(1.05);
 }
@@ -127,10 +129,13 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    align-items: center; /* Center nav items vertically */
 }
 
 nav ul li {
     margin-right: 40px;
+    display: flex;
+    align-items: center; /* Center individual nav items vertically */
 }
 
 nav ul li:last-child {
@@ -214,6 +219,28 @@ nav ul li a:hover {
         margin: 20px 0;
     }
 }
+
+/* Additional styling for the resume button */
+nav ul li .resume-button {
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-align: center;
+    background-color: var(--highlight-color);
+    color: #FFFFFF;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+nav ul li .resume-button {
+    color: var(--primary-color);
+}
+
+nav ul li .resume-button:hover {
+    background-color: var(--secondary-color);
+}
+
 
 /* Style for the Hero section */
 .hero {
