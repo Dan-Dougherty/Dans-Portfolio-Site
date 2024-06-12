@@ -1190,6 +1190,7 @@ h2 {
 
 .case-study-section h3 {
   font-size: 1.75em;
+  font-weight: 500;
   margin-bottom: 10px;
   color: var(--primary-color);
 }
