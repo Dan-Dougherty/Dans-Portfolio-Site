@@ -1210,6 +1210,10 @@ h2 {
 }
 
 .case-study-section ul {
+    margin: 5px 30px;
+}
+
+.case-study-section ul {
   list-style-type: disc;
   padding-left: 20px;
   display: inline-block;
