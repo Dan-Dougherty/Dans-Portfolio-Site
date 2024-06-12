@@ -146,7 +146,7 @@ let score = 0
 let highScore = localStorage.getItem('highScore') || 0 // Retrieve high score from localStorage
 let activeHole = null
 let timer
-const initialSpeed = 700 // Set a faster initial speed
+const initialSpeed = 800 // Set a faster initial speed
 
 // Display initial high score
 document.getElementById('high-score').innerText = highScore

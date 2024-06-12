@@ -307,7 +307,7 @@ nav ul li .resume-button:hover {
 }
 
 .hero-text p {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   max-width: 80%;
 }
 
@@ -321,6 +321,10 @@ button {
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+#hero-button {
+  margin-top: 20px;
 }
 
 button:hover {
@@ -542,7 +546,7 @@ button:hover {
 
 .card-work p {
   color: var(--text-color);
-  margin-bottom: auto;
+  flex-grow: 1;
 }
 
 /* Content container within the card */
@@ -578,6 +582,7 @@ button:hover {
   justify-content: space-between;
   align-items: flex-start;
 }
+
 
 /* Game container */
 .game-container {
@@ -621,8 +626,6 @@ button:hover {
   background-color: #8b4513;
 }
 
-
-
 #score,
 #high-score {
   font-size: 1.5em;
@@ -632,30 +635,30 @@ button:hover {
 
 /* Skills list styling */
 .card-text ul.skills {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-    font-size: 0.8em;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .card-text ul.skills li {
-    padding: 0 5px;
-    color: var(--primary-color);
-    display: inline;
-  }
-  
-  .card-text ul.skills li::after {
-    content: '/';
-    margin-left: 10px;
-  }
-  
-  .card-text ul.skills li:last-child::after {
-    content: '';
-  }
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 0.8em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-text ul.skills li {
+  padding: 0 5px;
+  color: var(--primary-color);
+  display: inline;
+}
+
+.card-text ul.skills li::after {
+  content: '/';
+  margin-left: 10px;
+}
+
+.card-text ul.skills li:last-child::after {
+  content: '';
+}
 
 /* Button styling */
 .card-work button {
@@ -667,8 +670,8 @@ button:hover {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 20px;
   align-self: center;
-  margin-top: 40px;
 }
 
 /* Button hover effect */
@@ -701,7 +704,6 @@ button:hover {
     padding: 10px 40px;
     border-radius: 30px;
     align-self: center;
-    margin-top: 20px;
   }
 }
 
@@ -723,7 +725,6 @@ button:hover {
   .card-content {
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
   }
 }
 
@@ -750,7 +751,7 @@ button:hover {
 .integration h2 {
   text-align: center;
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: 700;
   color: var(--primary-color);
 }
@@ -759,8 +760,8 @@ button:hover {
 .card {
   background-color: #ffffff;
   border-radius: var(--border-radius);
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 30px;
+  padding: 30px 40px 30px 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -786,7 +787,7 @@ button:hover {
 .skills-tools .tools-list,
 .skills-tools .frontend-list {
   padding: 0;
-  margin: 0 0 20px 20px;
+  margin: 15px 0px 0px 20px;
   list-style-type: disc;
 }
 
@@ -795,6 +796,13 @@ button:hover {
 .skills-tools .tools-list li,
 .skills-tools .frontend-list li {
   margin-bottom: 10px;
+}
+
+/* Remove margin-bottom for the last list item */
+.skills-tools .skills-list:last-child,
+.skills-tools .tools-list:last-child,
+.skills-tools .frontend-list:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive adjustments */
@@ -807,6 +815,7 @@ button:hover {
 
   .card {
     padding: 15px;
+    margin-bottom: 20px;
   }
 
   .attributes h2,
@@ -856,7 +865,7 @@ button:hover {
 
 .contact p {
   font-size: 1.2em;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   word-break: break-word; /* Ensure long words or URLs break to fit the container */
   overflow-wrap: break-word; /* Ensure long words or URLs wrap to fit the container */
 }
@@ -876,14 +885,15 @@ button:hover {
 
 .form-group {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 30px;
   text-align: left;
 }
 
 .form-group label {
   display: block;
   font-size: 1em;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: var(--primary-color);
 }
 
@@ -910,6 +920,7 @@ button[type='submit'] {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 30px;
 }
 
 button[type='submit']:hover {
