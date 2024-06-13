@@ -103,7 +103,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   var text = $('#typewriter').text()
   var index = 0
-  var speed = 100
+  var speed = 75
 
   function typeWriter() {
     if (index < text.length) {
