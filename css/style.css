@@ -766,7 +766,7 @@ button:hover {
 }
 
 .integration-container .card {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 /* Heading inside the card */
@@ -834,6 +834,45 @@ button:hover {
   .skills-tools .frontend-list li {
     font-size: 0.9em;
   }
+}
+
+/* Certification Section */
+#certification {
+  padding: 40px 20px;
+  background-color: var(--light-bg-color);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+#certification h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.certification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certification img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.certification p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 /* Contact Page Styling */
