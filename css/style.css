@@ -728,6 +728,56 @@ button:hover {
   }
 }
 
+/* Fun Facts Section */
+#fun-facts {
+  padding: 40px 20px;
+  background-color: var(--light-bg-color);
+  max-width: var(--max-width);
+  margin: 15px auto;
+  text-align: center;
+}
+
+#fun-facts h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.fun-facts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+}
+
+.fun-fact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  padding: 30px;
+}
+
+.fun-fact img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.fun-fact p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .fun-facts-container {
+    gap: 20px;
+  }
+}
+
 /* Skills Section */
 .attributes,
 .skills-tools,
@@ -872,6 +922,14 @@ button:hover {
   font-weight: 500;
   color: var(--text-color);
   margin-top: 20px;
+  margin-bottom: none;
+}
+
+.certification p.specialization {
+  font-size: .9em;
+  font-weight: 300;
+  margin-top: none;
+  color: var(--text-color);
   margin-bottom: 100px;
 }
 
