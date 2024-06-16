@@ -134,13 +134,13 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
-  align-items: center; /* Center nav items vertically */
+  align-items: center;
 }
 
 nav ul li {
   margin-right: 40px;
   display: flex;
-  align-items: center; /* Center individual nav items vertically */
+  align-items: center;
 }
 
 nav ul li:last-child {
@@ -252,15 +252,10 @@ nav ul li .resume-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Use 100vh for full viewport height */
+  min-height: 100vh;
   padding: 0;
   margin: 0;
-  margin-top: 40px;
   box-sizing: border-box;
-}
-
-.hero.homepage {
-  margin-top: 40px;
 }
 
 .hero-content {
@@ -272,14 +267,13 @@ nav ul li .resume-button:hover {
   padding: 20px;
   flex-wrap: nowrap;
   justify-content: space-between;
-  text-align: center; /* Center text for smaller screens */
 }
 
 .personal-img {
   flex: 0 1 30%;
   margin-right: 20px;
   margin-left: 40px;
-  max-height: 50vh; /* Set max-height relative to viewport height */
+  max-height: 50vh;
   overflow: hidden;
   border-radius: var(--border-radius);
 }
@@ -287,7 +281,7 @@ nav ul li .resume-button:hover {
 .personal-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Changed to contain for better fitting */
+  object-fit: contain;
   border-radius: var(--border-radius);
 }
 
@@ -309,6 +303,10 @@ nav ul li .resume-button:hover {
 .hero-text p {
   margin-bottom: 30px;
   max-width: 80%;
+}
+
+.hero-text p.about {
+  margin-bottom: 15px;
 }
 
 button {
@@ -334,9 +332,9 @@ button:hover {
 /* Responsive styling for smaller screens */
 @media (max-width: 429px) {
   .personal-img {
-    width: 80%; /* Adjust the width for mobile devices */
-    max-width: 200px; /* Set a maximum width for the image */
-    max-height: 30vh; /* Adjust the height for mobile devices */
+    width: 80%;
+    max-width: 200px;
+    max-height: 30vh;
   }
 }
 
@@ -355,9 +353,10 @@ button:hover {
 
   .personal-img {
     margin: 0 auto 20px;
-    width: 60%; /* Adjust the width for medium devices */
-    max-width: 300px; /* Set a maximum width for the image */
-    max-height: 30vh; /* Adjust the height for medium devices */
+    width: 60%;
+    max-width: 300px;
+    max-height: 30vh;
+    margin-top: 30px;
   }
 
   .personal-img img {
@@ -409,10 +408,11 @@ button:hover {
 
   .personal-img {
     margin: 0 auto 20px;
-    width: 60%; /* Adjust the width for medium devices */
-    max-width: 300px; /* Set a maximum width for the image */
-    max-height: 40vh; /* Adjust the height for medium devices */
+    width: 60%;
+    max-width: 300px;
+    max-height: 40vh;
   }
+
 
   .personal-img img {
     height: auto;
@@ -453,9 +453,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(
-      90vh - 70px
-    ); /* Adjust this value to the height of your header */
+    min-height: calc(90vh - 70px);
     padding: 20px;
   }
 
@@ -471,7 +469,7 @@ button:hover {
   .personal-img {
     margin: 0 40px 0 0;
     width: 40%;
-    max-height: 50vh; /* Set max-height relative to viewport height */
+    max-height: 50vh;
   }
 
   .hero-text {
@@ -492,6 +490,7 @@ button:hover {
     border-radius: 30px;
   }
 }
+
 
 /* Cards Section */
 .cards-section {
@@ -930,7 +929,6 @@ button:hover {
   font-weight: 400;
   color: var(--secondary-color);
   margin-top: 10px;
-  margin-bottom: 80px;
   font-style: italic;
 }
 
@@ -1047,6 +1045,7 @@ footer {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 100px;
 }
 
 footer section {
