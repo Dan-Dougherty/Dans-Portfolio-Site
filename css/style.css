@@ -925,12 +925,13 @@ button:hover {
   margin-bottom: none;
 }
 
-.certification p.specialization {
-  font-size: .9em;
-  font-weight: 300;
-  margin-top: none;
-  color: var(--text-color);
-  margin-bottom: 100px;
+.certification .specialization {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin-top: 10px;
+  margin-bottom: 80px;
+  font-style: italic;
 }
 
 /* Contact Page Styling */
