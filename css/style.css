@@ -936,7 +936,7 @@ button:hover {
 
 /* Contact Page Styling */
 .contact {
-  padding: 60px 20px;
+  padding: 40px 20px;
   background-color: var(--light-bg-color);
   display: flex;
   justify-content: center;
@@ -958,14 +958,15 @@ button:hover {
 .contact h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
+  margin-top: 0px;
   color: var(--primary-color);
 }
 
 .contact p {
   font-size: 1.2em;
   margin-bottom: 20px;
-  word-break: break-word; /* Ensure long words or URLs break to fit the container */
-  overflow-wrap: break-word; /* Ensure long words or URLs wrap to fit the container */
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact a {
