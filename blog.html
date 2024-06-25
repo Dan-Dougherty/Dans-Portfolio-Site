@@ -142,8 +142,8 @@
             <li>
               <a href="#scroll" id="work-link" data-target="scroll">Work</a>
             </li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="current">Contact</a></li>
+            <li><a href="blog.html"  class="current">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li>
               <a
                 href="files/Dan_Dougherty_Resume_UX.pdf"
@@ -159,40 +159,49 @@
 
     <!--Main Section Starts-->
     <main>
-        <section class="contact">
-          <div class="contact-container">
-            <h1>Contact Me</h1>
-            <p>
-              I'm always excited to connect with new people and explore potential opportunities. 
-              Whether you have a question, a project idea, or just want to say hello, feel free to reach out!
-            </p>
-            <p>
-              You can contact me through the form below or directly via email at 
-              <a href="mailto:dandougherty1011@gmail.com">dandougherty1011@gmail.com</a>.
-            </p>
-      
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-              <input type="hidden" name="form-name" value="contact">
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <small id="email-error" style="color: red; display: none">
-                  Please enter a valid email address.
-                </small>
-              </div>
-              <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit">Send Message</button>
-            </form>
-          </div>
+        <!-- Blog Archive Section -->
+        <section id="blog-archive" class="blog-archive-section">
+            <div class="container">
+                <h2 class="section-header" data-aos="zoom-in" data-aos-duration="600">Blog Archive</h2>
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <div class="blog-post" data-date="2024-06-23" data-aos="zoom-in" data-aos-duration="600">
+                        <div class="blog-image">
+                            <img src="img/what_is_your_story.jpg" alt="Blog Post 1">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">My Journey Through CareerFoundry: From Customer Service to UX Design</h3>
+                            <p class="blog-date">Posted on June 23, 2024</p>
+                            <p class="blog-excerpt">Discover how I transitioned from customer service to UX design 
+                                through CareerFoundry’s comprehensive course...</p>
+                            <a href="myjourneyblog.html" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    
+                    <!-- Blog Post 3 -->
+                    
+                    <!-- Blog Post 4 -->
+                    
+                    <!-- Blog Post 5 -->
+                    
+                    <!-- Blog Post 6 -->
+                    
+                    <!-- Blog Post 7 -->
+                    
+                    <!--End Blog Posts-->
+                </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link" data-page="prev">&laquo; Previous</a>
+                    <a href="#" class="page-link" data-page="1">1</a>
+                    <a href="#" class="page-link" data-page="2">2</a>
+                    <a href="#" class="page-link" data-page="3">3</a>
+                    <a href="#" class="page-link" data-page="next">Next &raquo;</a>
+                </div>
+            </div>
         </section>
-      </main>
+    </main>
     <!--End Main Section-->
 
     <!--Start Footer-->
@@ -218,11 +227,9 @@
           </div>
       </div>
   </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/blog.js"></script>
   </body>
 </html>

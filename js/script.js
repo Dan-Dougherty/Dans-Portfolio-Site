@@ -214,3 +214,72 @@ function resetGame() {
   })
   activeHole = null
 }
+
+// Blog Archive # posts per page
+
+document.addEventListener('DOMContentLoaded', function () {
+  const postsPerPage = 4; // Number of posts per page
+  const blogGrid = document.querySelector('.blog-grid');
+  const posts = Array.from(blogGrid.children);
+  const totalPages = Math.ceil(posts.length / postsPerPage);
+  let currentPage = 1;
+
+  function displayPage(page) {
+      blogGrid.innerHTML = '';
+      const start = (page - 1) * postsPerPage;
+      const end = start + postsPerPage;
+      const paginatedPosts = posts.slice(start, end);
+      paginatedPosts.forEach(post => blogGrid.appendChild(post));
+      updatePaginationControls();
+  }
+
+  function updatePaginationControls() {
+      const pagination = document.querySelector('.pagination');
+      pagination.innerHTML = '';
+
+      const prevPageLink = document.createElement('a');
+      prevPageLink.href = '#';
+      prevPageLink.textContent = '« Previous';
+      prevPageLink.style.display = currentPage === 1 ? 'none' : 'inline-block';
+      prevPageLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (currentPage > 1) {
+              currentPage--;
+              displayPage(currentPage);
+          }
+      });
+
+      pagination.appendChild(prevPageLink);
+
+      for (let i = 1; i <= totalPages; i++) {
+          const pageLink = document.createElement('a');
+          pageLink.href = '#';
+          pageLink.textContent = i;
+          if (i === currentPage) {
+              pageLink.classList.add('active');
+          }
+          pageLink.addEventListener('click', function (e) {
+              e.preventDefault();
+              currentPage = i;
+              displayPage(currentPage);
+          });
+          pagination.appendChild(pageLink);
+      }
+
+      const nextPageLink = document.createElement('a');
+      nextPageLink.href = '#';
+      nextPageLink.textContent = 'Next »';
+      nextPageLink.style.display = currentPage === totalPages ? 'none' : 'inline-block';
+      nextPageLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (currentPage < totalPages) {
+              currentPage++;
+              displayPage(currentPage);
+          }
+      });
+
+      pagination.appendChild(nextPageLink);
+  }
+
+  displayPage(currentPage); // Initial display
+});
