@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
   })
 
-  // Handle 'Work' link navigation from other pages
+// Handle 'Work' link navigation from other pages
   $('#work-link').on('click', function (e) {
     if (window.location.pathname !== '/index.html') {
       e.preventDefault()
@@ -98,7 +98,7 @@ $(document).ready(function () {
   })
 })
 
-// Typewriter
+// Typewriter Effect
 
 $(document).ready(function () {
   var text = $('#typewriter').text()
