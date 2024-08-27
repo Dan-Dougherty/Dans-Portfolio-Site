@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Dougherty's Portfolio - Butcher's Union Case Study</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Case study detailing the redesign of the Butcher's Union website, focusing on UX design, mobile responsiveness, and interactive elements.">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="UX Design, Butcher's Union, Case Study, Responsive Design, Web Design">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Dan Dougherty's Portfolio - Butcher's Union Case Study">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.doughertydesigns.com">
+    <meta property="og:image" content="https://www.doughertydesigns.com/img/ButchersUnion_Hero.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:description" content="Showcasing the redesign of the Butcher's Union website with a focus on enhancing user experience and brand identity.">
+    <meta property="og:site_name" content="Dan Dougherty's Portfolio">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dan Dougherty's Portfolio - Butcher's Union Case Study">
+    <meta name="twitter:description" content="Showcasing the redesign of the Butcher's Union website with a focus on enhancing user experience and brand identity.">
+    <meta name="twitter:image" content="https://www.doughertydesigns.com/img/ButchersUnion_Hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/Dougherty_Designs_favicon_16x16.png" sizes="16x16">
+    <link rel="icon" href="img/Dougherty_Designs_favicon_32x32.png" sizes="32x32">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="normalize.css">
+    <link
+      rel="stylesheet"
+      type="text/CSS"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    >
+    <link rel="stylesheet" type="text/CSS" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css"
+    >
+
+    <!-- Font Families -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Logo SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="162" height="49" viewBox="0 0 162 49">
+                        <text transform="translate(0 19)" fill="#FFFFFF" font-size="20" font-family="Montserrat-Bold, Montserrat" font-weight="700">
+                            <tspan x="0" y="0">Dan Dougherty</tspan>
+                            <tspan font-size="18" font-family="Montserrat-Regular, Montserrat" font-weight="400">
+                                <tspan x="0" y="25">UX Designer</tspan>
+                            </tspan>
+                        </text>
+                    </svg>
+                </a>
+            </div>
+    
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    
+            <!-- Navigation -->
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#scroll" id="work-link" data-target="scroll">Work</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="files/Dan_Dougherty_Resume_UX.pdf" target="_blank" class="resume-button">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="case-study">
+            <h2 class="case-study-header">Butcher's Union Case Study</h2>
+
+            <!-- Introduction -->
+            <div class="case-study-section" data-aos="zoom-in" data-aos-duration="400">
+                <h3>Introduction</h3>
+                <p class="left-align">When Butcher's Union, a beloved restaurant in Grand Rapids, Michigan, needed a refresh of their online presence, they faced several challenges. Their existing website was outdated, with a cumbersome navigation system, limited mobile responsiveness, and content that failed to capture the unique atmosphere of their establishment. Recognizing an opportunity to align their digital experience with their in-person service, I took on the project as a UX Designer to reimagine the website's user experience.</p>
+                <p class="left-align">Over the course of six weeks, I set out to redesign the website, focusing on usability, aesthetics, and cross-device functionality. Using Adobe XD as my primary design tool, and Adobe Illustrator for vector graphics, I aimed to create a modern, user-friendly interface that would not only meet the needs of Butcher's Union's customers but also elevate their brand in the competitive restaurant industry.</p>
+            </div>
+
+            <!-- Problem Statement -->
+            <div class="case-study-section" data-aos="zoom-in" data-aos-duration="400">
+                <h3>Problem Statement</h3>
+                <p class="left-align">The Butcher's Union website faced several significant challenges that hindered its usability and failed to capture the restaurant's vibrant atmosphere.</p>
+                <h5>Current Issues:</h5>
+                <ul>
+                    <li><strong class="bold">Outdated Design:</strong> The site had a cluttered layout with inconsistent colors and insufficient whitespace, leading to a dated and unappealing look.</li>
+                    <li><strong class="bold">Cumbersome Navigation:</strong> The navigation menu was hard to read due to poor contrast and was only accessible from the homepage. This forced users to return to the homepage to find key information, disrupting their experience.</li>
+                    <li><strong class="bold">Inconsistent Layout and Readability:</strong> Inconsistencies in spacing and alignment across pages affected readability, particularly in the menu sections. Missing alt text and screen reader issues further impacted accessibility.</li>
+                    <li><strong class="bold">Poor Mobile Responsiveness:</strong> The site did not adapt well to mobile devices, resulting in distorted layouts and difficult navigation, especially in the mobile menu and hours of operation display.</li>
+                    <li><strong class="bold">Lack of Engagement:</strong> The website’s outdated design and lack of engaging content failed to reflect the restaurant's unique experience, leading to low user interaction.</li>
+                </ul>
+
+                <h5>User Pain Points:</h5>
+                <ul>
+                    <li><strong class="bold">Navigation Challenges:</strong> Users struggled to find essential information due to poor navigation and inconsistent layout.</li>
+                    <li><strong class="bold">Mobile Frustration:</strong> Mobile users encountered significant issues, leading to a negative experience.</li>
+                    <li><strong class="bold">Outdated Design:</strong> The lack of modern design elements and engagement failed to capture users' interest.</li>
+                </ul>
+
+                <h4>Interactive View of Current Website:</h4>
+                <p class="left-align">
+                    Below are screen recordings of the current Butcher's Union website, showcasing the issues with the navigation and overall usability. These recordings illustrate the challenges users face when interacting with both the desktop and mobile versions of the site.
+                </p>
+
+                <h5 class="xd-mobile-heading">Mobile View:</h5>
+                <div class="mobile-video-container">
+                    <video controls width="100%">
+                        <source src="videos/butchers-union-mobile-screen-recording.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <h5 class="xd-desktop-heading">Desktop View:</h5>
+                <div class="desktop-frame">
+                    <div class="screen">
+                        <video controls>
+                            <source src="videos/butchers-union-desktop-screen-recording.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <!-- Research -->
+            <div class="case-study-section" data-aos="zoom-in" data-aos-duration="400">
+                <h3>Research</h3>
+                <p class="left-align">To ensure the redesigned Butcher's Union website effectively met user needs and addressed existing pain points, I conducted comprehensive user research, including a competitive analysis and a survey of potential users.</p>
+                <h5>Competitive Analysis</h5>
+                <p class="left-align">I analyzed three competitor websites — Graydon's Crossing, The Winchester, and Reserve Wine & Food — to understand the strengths and weaknesses in their design and user experience.</p>
+                    
+                <ul>
+                    <li><strong class="bold">Graydon's Crossing:</strong> This site stood out for its warm, inviting design and sticky navigation, which allowed for easy access to essential information. The high-quality imagery and consistent branding created a cohesive user experience. However, the reliance on video content could slow down page load times, especially on mobile devices.</li>
+                    <li><strong class="bold">The Winchester:</strong> While this site featured a clean and modern design, its navigation structure was less intuitive, with a non-sticky and vertically stacked menu that cluttered the interface. Despite its strong visual design, the navigation issues detracted from overall usability.</li>
+                    <li><strong class="bold">Reserve Wine &amp; Food:</strong> This site offered a clean, elegant design with high-quality visuals, but it suffered from navigation and content accessibility issues. The lack of a direct menu link and stretched lettering made it difficult for users to find essential information quickly, particularly on mobile devices.</li>
+                </ul>
+
+                <h5>User Survey</h5>
+                <p class="left-align">A survey of potential users provided further insights into their expectations and pain points when using restaurant websites.</p>
+                    
+                <ul>
+                    <li><strong class="bold">Key Information Sought:</strong> Users most commonly look for the menu, hours of operation, location, and reservation options. These elements need to be easily accessible and prominently displayed.</li>
+                    <li><strong class="bold">Device Preferences:</strong> The majority of users access restaurant websites via mobile devices, highlighting the critical need for mobile responsiveness and a seamless mobile user experience.</li>
+                    <li><strong class="bold">Common Frustrations:</strong>  Users expressed significant frustration with outdated content, particularly missing or incorrect menus and hours of operation. Poor mobile usability and difficulty in finding basic information were also common complaints.</li>
+                    <li><strong class="bold">Desired Features:</strong> Respondents emphasized the importance of clear, updated menus and visually appealing, clutter-free design. There was a strong preference for websites that present essential information on just one or two pages without unnecessary clutter.</li>
+                </ul>
+
+                <h5>Key Insights</h5>
+                <p class="left-align">A survey of potential users provided further insights into their expectations and pain points when using restaurant websites.</p>
+                    
+                <ul>
+                    <li><strong class="bold">Prioritize Mobile Usability:</strong> With most users accessing the site via mobile devices, the redesign needed to ensure a responsive design that adapts well to smaller screens, with intuitive navigation and easily readable content.</li>
+                    <li><strong class="bold">Streamline Navigation:</strong>  Addressing the cumbersome navigation of the current site, the new design should feature a sticky, easily accessible menu with high contrast for readability. Navigation should be consistent across all pages to prevent user frustration.</li>
+                    <li><strong class="bold">Update and Highlight Essential Information:</strong>  Ensuring that critical information such as menus, hours, and location are always current and easy to find will be key to improving user satisfaction.</li>
+                    <li><strong class="bold">Enhance Visual Appeal:</strong> Modernizing the website’s visual design with a cohesive color scheme, consistent branding, and high-quality imagery will help capture the unique atmosphere of Butcher's Union and engage users more effectively.</li>
+                    <li><strong class="bold">Minimize Clutter:</strong> By reducing unnecessary content and focusing on essential information, the site can offer a more streamlined and user-friendly experience, aligning with user preferences for simplicity.</li>
+                </ul>
+                <!-- Personas could be included here with images/icons to represent each persona -->
+
+                <h5>User Personas</h5>
+                <p class="left-align">
+                    To further inform the design process, I developed three key user personas based on the research insights. These personas represent the primary user groups for the Butcher's Union website
+                </p>
+
+                <div class="persona-container">
+                    <!-- Emily's Persona -->
+                    <div class="persona">
+                        <img src="img\Emily-avatar.png" alt="Emily - The Frequent Diner" class="persona-image">
+                        <h5>The Frequent Diner: Emily</h5>
+                        <p><strong>Age:</strong> 32 | <strong>Occupation:</strong> Marketing Manager | <strong>Location:</strong> Urban</p>
+                        <p><strong>Behaviors:</strong> Dines out multiple times a week, frequently visits restaurant websites on mobile devices.</p>
+                        <p><strong>Goals:</strong> Quickly view the menu and make reservations without hassle.</p>
+                        <p><strong>Pain Points:</strong> Frustrated by cluttered, non-responsive websites that are hard to navigate on mobile.</p>
+                        <blockquote>“I want to quickly see what’s on the menu and make a reservation without any hassle.”</blockquote>
+                    </div>
+            
+                    <!-- John's Persona -->
+                    <div class="persona">
+                        <img src="img\john-avatar.png" alt="John - The Occasional Visitor" class="persona-image">
+                        <h5>The Occasional Visitor: John</h5>
+                        <p><strong>Age:</strong> 45 | <strong>Occupation:</strong> IT Consultant | <strong>Location:</strong> Suburban</p>
+                        <p><strong>Behaviors:</strong> Dines out a few times a month, primarily uses desktop computers to browse.</p>
+                        <p><strong>Goals:</strong> Find detailed menu information, check for specials or events.</p>
+                        <p><strong>Pain Points:</strong> Annoyed by poor readability and outdated information on websites.</p>
+                        <blockquote>“I like to know exactly what the restaurant offers and if there are any specials before I decide to go.”</blockquote>
+                    </div>
+            
+                    <!-- Sarah's Persona -->
+                    <div class="persona">
+                        <img src="img\Sarah-avatar.png" alt="Sarah - The Event Planner" class="persona-image">
+                        <h5>The Event Planner: Sarah</h5>
+                        <p><strong>Age:</strong> 28 | <strong>Occupation:</strong> Event Planner | <strong>Location:</strong> Urban</p>
+                        <p><strong>Behaviors:</strong> Plans group outings and events, uses both desktop and mobile devices for research.</p>
+                        <p><strong>Goals:</strong> Easily find information about group dining and private event options, contact the restaurant for bookings.</p>
+                        <p><strong>Pain Points:</strong> Dislikes websites with unclear information about events and those that are not mobile-friendly.</p>
+                        <blockquote>“I need to know if the restaurant can handle a group booking and what kind of private dining options they have.”</blockquote>
+                    </div>
+                </div>
+                
+                <p class="left-align">
+                    These personas guided the design decisions, ensuring the final product addressed the needs and frustrations of the primary user groups.
+                </p>
+            </div>    
+
+            <!-- Design Process -->
+            <div class="case-study-section" data-aos="zoom-in" data-aos-duration="400">
+                <h3>Design Process</h3>
+                <p class="left-align">The design process for the Butcher's Union website focused on transforming research insights and user personas into a visually appealing, user-friendly interface. The journey from initial wireframes to high-fidelity prototypes involved continuous refinement, ensuring that the design aligned with both user needs and the restaurant’s brand identity.</p>
+
+                <h5>Wireframes</h5>
+                <p class="left-align">I began the design process with low-fidelity wireframes to outline the basic structure and layout of the website. These wireframes were crucial in visualizing the flow of information and ensuring that key elements were easily accessible.</p>
+                    
+                <ul>
+                    <li><strong class="bold">Navigation Placement:</strong> To address the cumbersome navigation issues identified in the research, I positioned the navigation menu prominently at the top of the page. The navigation was designed to be sticky, ensuring it remained accessible as users scrolled.</li>
+                    <li><strong class="bold">Content Hierarchy:</strong>  The layout emphasized a clear hierarchy of content, with the menu, hours of operation, and reservation options prioritized. This structure was intended to reduce clutter and make it easier for users like Emily and John to quickly find essential information.</li>
+                    <li><strong class="bold">Mobile-first Approach:</strong>  Given the high usage of mobile devices among our personas, the wireframes were designed with a mobile-first approach. Key elements such as buttons and text were sized appropriately for small screens, ensuring a seamless experience across devices.</li>
+                </ul>
+
+                <!-- Include wireframe images and high-fidelity prototypes with before/after comparisons -->
+
+                <!-- Mobile Version -->
+                <h5 class="xd-mobile-heading">Mobile Wireframe:</h5>
+                <div class="mobile-frame">
+                    <div class="screen">
+                        <iframe src="https://xd.adobe.com/embed/6bcf2a71-553e-4f04-b05b-d9565e56958e-3e9c/?fullscreen" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Desktop Version -->
+                <h5 class="xd-desktop-heading">Desktop Wireframe:</h5>
+                <div class="desktop-frame">
+                    <div class="screen">
+                        <iframe src="https://xd.adobe.com/embed/036d72e2-9b1b-46f4-8d0f-595e86160a64-563e/?fullscreen" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h5>High-Fidelity Prototypes</h5>
+                <p class="left-align">Building on the wireframes, I developed high-fidelity prototypes that incorporated detailed design elements, including color schemes, typography, and imagery. The prototypes evolved significantly based on iterative feedback and usability testing.</p>
+
+                <ul>
+                    <li><strong class="bold">Visual Design:</strong> The prototypes featured a modern, cohesive design that reflected the upscale yet welcoming atmosphere of Butcher's Union. High-quality images of the restaurant and its dishes were strategically placed to enhance visual appeal and engagement.</li>
+                    <li><strong class="bold">Responsive Design:</strong>  The prototypes were tested on various devices to ensure responsiveness. Adjustments were made to improve the layout on mobile screens, particularly in the navigation and content display.</li>
+                    <li><strong class="bold">Interactive Elements:</strong> I introduced interactive elements such as a hover effect on menu items, buttons, and a smooth scroll-to-section feature. These elements were designed to improve user interaction and create a more engaging experience.</li>
+                </ul>
+
+                <p class="left-align">Usability testing with a small group of users revealed that the sticky navigation and mobile-first design were highly effective in improving user satisfaction. Adjustments were made to the color contrast and font sizes based on feedback to further enhance readability.</p>
+
+                <h5>Design Choices</h5>
+                <p class="left-align"></p>
+
+                <ul>
+                    <li><strong class="bold">Colors:</strong> The design used deep blue (#02318B) for primary elements like headers and buttons, paired with gold (#FFD700) for accents. Neutral tones—light gray (#F2F2F2) for backgrounds, dark gray (#4A4A4A) for text, and white (#FFFFFF) for clean layouts—ensured readability and a sophisticated look that aligned with Butcher's Union's brand. This color scheme balanced warmth and clarity, addressing user needs for a visually appealing and easy-to-navigate site.</li>
+                    <li><strong class="bold">Typography:</strong> I selected Playfair Display for headings and titles to evoke a classic and elegant feel, while Roboto was used for body text and paragraphs for its clean and modern appearance. This combination provided a balance between sophistication and readability.</li>
+                    <li><strong class="bold">Imagery:</strong> High-quality images showcasing the restaurant’s interior, dishes, and drinks were used to create an immersive experience.</li>
+                    <li><strong class="bold">Layout and Spacing:</strong> To address Emily’s frustration with cluttered websites, the layout was designed with ample whitespace, allowing content to breathe and reducing cognitive load. The clean, minimalist design helped users focus on the most important information without feeling overwhelmed.</li>
+                </ul>
+
+                <p class="left-align">Through continuous refinement and user feedback, the design evolved into a final product that not only met user needs but also elevated the brand’s digital presence.</p>
+
+                
+            </div>
+
+            <!-- Final Design -->
+            <div class="case-study-section" data-aos="zoom-in" data-aos-duration="400">
+                <h3>Final Design</h3>
+                <p class="left-align">The final design for the Butcher's Union website captures the restaurant's unique atmosphere while providing a seamless user experience. The design features a modern, responsive layout with clean lines, ample whitespace, and a cohesive color palette that reflects the brand’s identity. Key screens and mockups include:</p>
+                    
+                <ul>
+                    <li><strong class="bold">Homepage:</strong> Features a striking hero image, sticky navigation, and easy access to essential information such as the menu, hours of operation, and reservation options.</li>
+                    <li><strong class="bold">Menu's Page:</strong> A visually engaging layout that highlights the restaurant’s offerings with clear, readable text.</li>
+                    <li><strong class="bold">Contact &amp;Location:</strong> The "Contact Us" feature is seamlessly integrated as a pop-up form, enabling users to send inquiries without navigating away from the page. Key contact information, including the phone number and location, is prominently displayed in the hero section of the homepage and repeated in the footer for easy access. Additionally, an FAQ page is included to address common questions, providing users with quick answers to their inquiries.</li>
+                </ul>
+
+                <h5>Interactive Elements</h5>
+                <p>Several key interactive elements were integrated into the design to enhance user engagement.</p>
+
+                <ul>
+                    <li><strong class="bold">Online Waitlist:</strong> Users can click to make a reservation, which directs them to a separate site, 'Resy,' where they can handle all reservation information and view available times. This feature is accessible from both desktop and mobile devices, ensuring a smooth experience regardless of how users access the site.</li>
+                    <li><strong class="bold">Sticky Navigation:</strong> The navigation bar remains visible as users scroll, providing easy access to different sections of the site without requiring them to return to the top of the page.</li>
+                    <li><strong class="bold">Scroll-to-Section Buttons:</strong> Smooth scroll-to-section buttons are used on the menu page, allowing users to quickly jump to relevant content (food, drinks, happy hour) without scrolling down the entire page. Additionally, a scroll-to-top button is provided to quickly return to the top of the page, enhancing navigation on this longer page.</li>
+                </ul>
+
+                <h5>Responsive Design</h5>
+                <p>The design was carefully crafted to work seamlessly across all devices.</p>
+
+                <ul>
+                    <li><strong class="bold">Mobile View:</strong> The mobile version is optimized for smaller screens, with touch-friendly navigation, simplified layouts, and responsive images that adjust to different device sizes.</li>
+                </ul>
+
+                <!-- Mobile Version -->
+                
+                <div class="mobile-frame">
+                    <div class="screen">
+                        <iframe src="https://xd.adobe.com/embed/61bb4dfd-067e-49fd-a678-7a90ad81ee76-34e8/?fullscreen" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+        
+                <ul class="hidden">
+                    <li><strong class="bold">Desktop View:</strong> The desktop version of the site takes full advantage of larger screens, with expansive layouts and high-resolution images that bring the restaurant’s ambiance to life.</li>
+                </ul>
+
+                <!-- Desktop Version -->
+                
+                <div class="desktop-frame-1440">
+                    <div class="screen">
+                        <iframe width="1440" height="1080" src="https://xd.adobe.com/embed/25475c4f-a78b-4078-85b5-1b9a53fcb221-7014/?fullscreen" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Conclusion -->
+            <div class="case-study-section" data-aos="zoom-in" data-aos-duration="400">
+                <h3>Conclusion</h3>
+                <p class="left-align">The redesign of the Butcher's Union website effectively addressed key user needs, resulting in a modern, user-friendly interface. The inclusion of interactive elements like scroll-to-section buttons and the contact form pop-up significantly enhanced usability. A key challenge was integrating third-party services like Resy, which interrupted the user flow by redirecting users off-site for reservations. This highlighted the importance of maintaining a seamless user journey, and in the future, I would explore more integrated solutions.</p>
+                <p class="left-align">Through this project, I learned the value of early user testing, especially for ensuring mobile responsiveness and intuitive navigation. Balancing aesthetic appeal with functional simplicity was crucial in creating a design that is both visually engaging and user-centric. Clear communication with stakeholders, particularly when coordinating with external services, was also a critical takeaway.
+                </p>
+
+                <h5>Next Steps</h5>
+                <p>To further enhance the user experience, I would focus on:</p>
+
+                <ul>
+                    <li><strong class="bold">Embedding Reservation Functionality:</strong> Explore ways to integrate the reservation system directly on the site, minimizing disruptions and creating a more seamless experience for users.</li>
+                    <li><strong class="bold">Implementing Behavioral Analytics Tools:</strong> Use tools like Google Analytics or Hotjar to track user interactions, providing insights into user behavior and identifying areas for improvement.</li>
+                    <li><strong class="bold">Conducting Ongoing Usability Testing:</strong> Regularly test the site with users to ensure it continues to meet their needs, with a particular focus on mobile responsiveness and site navigation.</li>
+                </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-inner-wrapper">
+                <!-- Contact Header and Description -->
+                <section class="footer-contact">
+                    <h2>Get in Touch</h2>
+                    <p>If you're interested in working together or just want to say hello, don't hesitate to reach out!</p>
+                    <button onclick="location.href='contact.html'">Contact Me</button>
+                </section>
+                <section class="footer-social">
+                    <h2>Follow Me</h2>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/daniel-joseph-dougherty" target="_blank" rel="www.linkedin.com/in/daniel-joseph-dougherty">LinkedIn</a></li>
+                        <li><a href="https://github.com/Dan-Dougherty" target="_blank" rel="https://github.com/Dan-Dougherty">GitHub</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; 2024 Dan Dougherty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
