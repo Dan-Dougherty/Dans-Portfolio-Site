@@ -37,7 +37,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   line-height: 1.4;
 }
 
@@ -58,6 +59,11 @@ h3 {
 
 h4 {
   font-size: 1.35em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.25em;
   font-weight: 400;
 }
 
@@ -1506,6 +1512,13 @@ h2 {
   color: var(--secondary-color);
 }
 
+.case-study-section h5 {
+  font-size: 1.35em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
 .case-study-section p,
 .case-study-section ul {
   font-size: 1em;
@@ -1521,7 +1534,6 @@ h2 {
 .case-study-section ul {
   list-style-type: disc;
   padding-left: 20px;
-  display: inline-block;
 }
 
 .case-study-section ul li {
@@ -1531,6 +1543,260 @@ h2 {
 
 .case-study-section ul li strong {
   font-weight: 500;
+}
+
+.case-study-section .left-align {
+  text-align: left;
+}
+
+.case-study-section .bold {
+  font-weight: 500;
+}
+
+/*Personas*/
+.persona {
+  text-align: left; /* Default alignment for the entire persona */
+  margin-bottom: 40px; /* Space between personas */
+}
+
+.persona-image {
+  width: 120px; /* Size of the image */
+  height: 120px;
+  border-radius: 50%; /* Make the image circular */
+  margin: 0 auto 20px; /* Center the image and add space below it */
+  display: block; /* Ensure the image is treated as a block element */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the image */
+}
+
+.persona h5 {
+  text-align: center; /* Center the name */
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #006363; /* Primary color for headings */
+}
+
+.persona p {
+  margin-bottom: 0px;
+  line-height: 1.4;
+  text-align: left; /* Ensure paragraphs are left-aligned */
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  margin: 20px 0 0 30px;
+
+}
+
+@media (max-width: 768px) {
+  .persona {
+      display: flex;
+      flex-direction: column; /* Stack image and text vertically */
+      text-align: center; /* Center align text for smaller screens */
+      align-items: center; /* Center align items for smaller screens */
+      margin-bottom: 50px; /* Space between personas */
+  }
+
+  .persona-image {
+      margin-right: 0;
+      margin-bottom: 10px; /* Add space below the image */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .persona h5 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      color: #02318B;
+  }
+
+  .persona p, blockquote {
+      text-align: center; /* Ensure text is left-aligned on mobile */
+  }
+}
+/* Styles for video*/
+.desktop-frame {
+  width: 100%;
+  max-width: 900px; /* Adjust the max-width to simulate the desktop monitor size */
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.screen {
+  background-color: #000; /* Black screen background */
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.screen video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.mobile-video-container {
+  width: 280px; /* Smaller than a typical mobile device */
+  height: 575px; /* Adjusted height for smaller display */
+  margin: 20px auto; /* Center the mobile video */
+  padding: 10px;
+  background-color: #000;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.mobile-video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .desktop-frame {
+      max-width: 600px; /* Reduce size for tablets */
+      padding: 15px;
+  }
+  .desktop-frame::before {
+      width: 50px;
+      height: 5px;
+  }
+  .screen {
+      padding: 8px;
+  }
+  .screen video {
+      border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-frame {
+      max-width: 450px; /* Further reduce size for smaller tablets or large phones */
+      padding: 10px;
+  }
+  .desktop-frame::before {
+      width: 40px;
+      height: 4px;
+  }
+  .screen {
+      padding: 6px;
+  }
+  .screen video {
+      border-radius: 6px;
+  }
+  .desktop-frame,
+  .desktop-view-heading {
+    display: none; /* Hides both the desktop video and its heading on mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .desktop-frame {
+      max-width: 320px; /* Mobile phone size */
+      padding: 8px;
+  }
+  .desktop-frame::before {
+      width: 30px;
+      height: 3px;
+  }
+  .screen {
+      padding: 5px;
+  }
+  .screen video {
+      border-radius: 5px;
+  }
+}
+
+/* Frame styling for desktop prototype */
+.xd-desktop-heading,
+ .xd-mobile-heading {
+  padding-bottom: 20px;
+}
+
+.desktop-frame {
+  width: 100%;
+  max-width: 900px; /* Adjust the max-width to simulate the desktop monitor size */
+  margin: 0 auto 30px auto;
+  position: relative;
+  background-color: #000; /* Black screen background */
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* Styling for the iframe inside the desktop frame */
+.desktop-frame iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Frame styling for mobile prototype */
+
+.mobile-frame {
+  width: 280px; /* Simulate a smaller mobile device */
+  height: auto; /* Allow the height to adjust according to content */
+  margin: 20px auto; /* Center the mobile video */
+  padding: 5px;
+  background-color: #000;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* Styling for the iframe inside the mobile frame */
+.mobile-frame iframe {
+  width: 100%;
+  height: 600px; /* Set a specific height */
+  border-radius: 15px;
+  border: none;
+}
+
+/* Hiding desktop view on mobile devices */
+@media (max-width: 768px) {
+  .xd-desktop-prototype {
+      display: none;
+  }
+  .xd-desktop-heading {
+      display: none;
+  }
+}
+
+.desktop-frame-1440 {
+  width: 100%;
+  max-width: 900px; /* Adjust the max-width to simulate the desktop monitor size */
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.desktop-frame-1440 iframe {
+  width: 100%;
+  height: 650px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Hiding desktop view on mobile devices */
+@media (max-width: 768px) {
+  .desktop-frame-1440 {
+      display: none;
+  }
+  .hidden {
+      display: none;
+  }
 }
 
 /* Styles for the scrollable image container */
