@@ -202,6 +202,10 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+  
   .hamburger-menu {
     display: flex;
   }
